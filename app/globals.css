@@ -174,15 +174,23 @@ mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
 
 /* ── Horizontal scroll ── */
 /* gradient overlays removed — no ::before or ::after on hscroll-wrap */
-.hscroll { display: flex; overflow-x: clip; gap: 1.4rem; padding: .5rem .25rem 1rem; scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch }
+.hscroll { display: flex; overflow-x: auto; gap: 1.4rem; padding: .5rem .25rem 1rem; scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; will-change: scroll-position; /* ← NEW */}
 .hscroll::-webkit-scrollbar { display: none }
 .hscroll-wrap {
   position: relative;
   min-height: 340px;
+  /* ↓ NEW — 3 lines added */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  contain: layout style;
+  overflow: hidden;
 }
 
 /* ── Product card ── */
-.pcard { position: relative; flex-shrink: 0; width: 210px; scroll-snap-align: start; border-radius: var(--r-md); background: linear-gradient(180deg, #fffef9, #fff3b8); box-shadow: var(--shadow-card); transition: transform .55s cubic-bezier(.16,1,.3,1), box-shadow .55s; cursor: pointer; isolation: isolate; overflow: hidden }
+.pcard { position: relative; flex-shrink: 0; width: 210px; scroll-snap-align: start; border-radius: var(--r-md); background: linear-gradient(180deg, #fffef9, #fff3b8); box-shadow: var(--shadow-card); transition: transform .55s cubic-bezier(.16,1,.3,1), box-shadow .55s; cursor: pointer; isolation: isolate; overflow: hidden;will-change: transform;               /* ← NEW */
+  backface-visibility: hidden;          /* ← NEW */
+  -webkit-backface-visibility: hidden;  /* ← NEW */
+}
 .pcard::after { content: ''; position: absolute; inset: -16px; border-radius: inherit; background: radial-gradient(circle at 50% 50%, rgba(245,197,24,.32), transparent 65%); opacity: 0; transition: opacity .5s; z-index: -1; pointer-events: none; filter: blur(8px) }
 .pcard:hover::after { opacity: 1 }
 .pcard::before { content: ''; position: absolute; inset: 0; border-radius: inherit; border: 1px solid rgba(184,134,11,.12); pointer-events: none; z-index: 3; transition: border-color .4s, box-shadow .4s }
