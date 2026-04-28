@@ -186,6 +186,7 @@ mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
   /* align-items: flex-start — cards don't stretch to fill container height */
   align-items: flex-start;
   overflow-x: auto;
+  overflow-y: hidden;
   gap: 1.4rem;
   padding: .5rem .25rem 1rem;
   scrollbar-width: none;
