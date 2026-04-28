@@ -29,12 +29,12 @@ const IMG = {
 
 /* ── DATA ───────────────────────────────────────────────────── */
 const PASTRIES = [
-  { name: 'Death by Chocolate', sub: 'Chocolate',         img: IMG.chocolate   },
-  { name: 'Snow White',         sub: 'Vanilla',           img: IMG.vanilla     },
-  { name: 'Pretty in Pink',     sub: 'Strawberry',        img: IMG.strawberry  },
-  { name: 'Golden Wish',        sub: 'Biscoff & Caramel', img: IMG.biscoff     },
-  { name: 'Lost in Garden',     sub: 'Fresh Fruits',      img: IMG.freshFruit  },
-  { name: 'Red Eve',            sub: 'Red Velvet',        img: IMG.redVelvet   },
+  { name: 'Death by Chocolate', sub: 'Chocolate',         img: IMG.chocolate,   desc: 'Deeply indulgent chocolate layers with velvety ganache frosting' },
+  { name: 'Snow White',         sub: 'Vanilla',           img: IMG.vanilla,     desc: 'Delicate vanilla sponge with light cream and a dusting of sugar' },
+  { name: 'Pretty in Pink',     sub: 'Strawberry',        img: IMG.strawberry,  desc: 'Fluffy strawberry sponge with fresh berry compote filling' },
+  { name: 'Golden Wish',        sub: 'Biscoff & Caramel', img: IMG.biscoff,     desc: 'Buttery Biscoff crust with silky caramel cream layers' },
+  { name: 'Lost in Garden',     sub: 'Fresh Fruits',      img: IMG.freshFruit,  desc: 'Light sponge adorned with hand-picked seasonal fresh fruits' },
+  { name: 'Red Eve',            sub: 'Red Velvet',        img: IMG.redVelvet,   desc: 'Moist red velvet with smooth cream cheese frosting' },
 ]
 const SIGNATURE = [
   { name: "Siren's Kiss",      sub: 'Classic Vanilla',   img: IMG.vanilla,      desc: 'Soft vanilla sponge with smooth vanilla cream or buttercream' },
@@ -45,37 +45,37 @@ const SIGNATURE = [
   { name: 'Lost in Garden',    sub: 'Fresh Fruit Cake',  img: IMG.berryFruit,   desc: 'Light sponge adorned with seasonal fresh fruits' },
 ]
 const BENTO = [
-  { name: 'Just You',       sub: 'Red Heart',  img: IMG.heartCake   },
-  { name: 'Black Pearl',    sub: 'Chocolate',  img: IMG.chocTruffle },
-  { name: 'Handsome Jin',   sub: 'Purple',     img: IMG.ferrero     },
-  { name: 'Pretty in Pink', sub: 'Strawberry', img: IMG.strawberry  },
+  { name: 'Just You',       sub: 'Red Heart',  img: IMG.heartCake,   desc: 'Intimate heart-shaped bento with velvety buttercream' },
+  { name: 'Black Pearl',    sub: 'Chocolate',  img: IMG.chocTruffle, desc: 'Mini chocolate cake with glossy dark ganache finish' },
+  { name: 'Handsome Jin',   sub: 'Purple',     img: IMG.ferrero,     desc: 'Elegant purple-tinted cake with subtle berry notes' },
+  { name: 'Pretty in Pink', sub: 'Strawberry', img: IMG.strawberry,  desc: 'Rosy strawberry bento with fresh berry topping' },
 ]
 const PREMIUM = [
-  { name: 'Golden Crown',    sub: 'Lotus Biscoff',    img: IMG.biscoffSlice, desc: 'Soft cake with Biscoff spread and cream'        },
-  { name: 'Racing Ferrero',  sub: 'Ferrero Rocher',   img: IMG.ferrero,      desc: 'Chocolate cake with hazelnut crunch'            },
-  { name: 'Oreo Cream Cake', sub: 'Chocolate & Oreo', img: IMG.chocTruffle,  desc: 'Chocolate and Oreo loaded cream'                },
-  { name: 'Lost in Garden',  sub: 'Fresh Fruit',      img: IMG.freshFruit,   desc: 'Light sponge with seasonal fresh fruits'        },
+  { name: 'Golden Crown',    sub: 'Lotus Biscoff',    img: IMG.biscoffSlice, desc: 'Soft cake with Biscoff spread and cream'   },
+  { name: 'Racing Ferrero',  sub: 'Ferrero Rocher',   img: IMG.ferrero,      desc: 'Chocolate cake with hazelnut crunch'       },
+  { name: 'Oreo Cream Cake', sub: 'Chocolate & Oreo', img: IMG.chocTruffle,  desc: 'Chocolate and Oreo loaded cream'           },
+  { name: 'Lost in Garden',  sub: 'Fresh Fruit',      img: IMG.freshFruit,   desc: 'Light sponge with seasonal fresh fruits'   },
 ]
 const COOKIES = [
-  { name: 'Classic Chocolate Chip', img: IMG.chipStack    },
-  { name: 'Double Chocolate',       img: IMG.nutella2     },
-  { name: 'Butter Cookies',         img: IMG.almondSingle },
-  { name: 'Nutella Filled',         img: IMG.nutella      },
-  { name: 'Lotus Biscoff',          img: IMG.biscoffSlice },
-  { name: 'Red Velvet',             img: IMG.rvCookie     },
-  { name: 'Almond Crunch',          img: IMG.almond       },
+  { name: 'Classic Chocolate Chip', img: IMG.chipStack,    desc: 'Golden-edged, chewy centre with premium chocolate chips' },
+  { name: 'Double Chocolate',       img: IMG.nutella2,     desc: 'Rich cocoa dough loaded with dark chocolate chunks' },
+  { name: 'Butter Cookies',         img: IMG.almondSingle, desc: 'Crumbly, melt-in-your-mouth classic buttery rounds' },
+  { name: 'Nutella Filled',         img: IMG.nutella,      desc: 'Soft cookie with a warm Nutella surprise inside' },
+  { name: 'Lotus Biscoff',          img: IMG.biscoffSlice, desc: 'Crisp Biscoff-spiced cookie with caramelised edge' },
+  { name: 'Red Velvet',             img: IMG.rvCookie,     desc: 'Velvety red cookies with a cream cheese drizzle' },
+  { name: 'Almond Crunch',          img: IMG.almond,       desc: 'Toasted almond cookies with a satisfying crunch' },
 ]
 
 const CONTACTS = [
-  { label: 'WhatsApp',  sub: 'Chat with us directly',         icon: '💬', color: '#25D366', href: 'https://wa.me/918888888888'                    },
-  { label: 'Instagram', sub: '@justcakeandcookie',            icon: '📸', color: '#E1306C', href: 'https://instagram.com/justcakeandcookie'       },
-  { label: 'Email',     sub: 'hello@justcakeandcookie.com',   icon: '✉️', color: '#c8860a', href: 'mailto:hello@justcakeandcookie.com'            },
-  { label: 'Call',      sub: '+91 88888 88888',               icon: '📞', color: '#3A1800', href: 'tel:+918888888888'                             },
+  { label: 'WhatsApp',  sub: 'Chat with us directly',       icon: '💬', color: '#25D366', href: 'https://wa.me/918888888888'                  },
+  { label: 'Instagram', sub: '@justcakeandcookie',          icon: '📸', color: '#E1306C', href: 'https://instagram.com/justcakeandcookie'     },
+  { label: 'Email',     sub: 'hello@justcakeandcookie.com', icon: '✉️', color: '#c8860a', href: 'mailto:hello@justcakeandcookie.com'          },
+  { label: 'Call',      sub: '+91 88888 88888',             icon: '📞', color: '#3A1800', href: 'tel:+918888888888'                           },
 ]
 
 const MARQUEE = ['Handcrafted Daily', '✦', 'Premium Ingredients', '✦', 'Made With Love', '✦', 'Bespoke Cakes', '✦', 'Artisan Cookies', '✦', 'Same-Day Delivery', '✦']
 
-/* ── REVEAL HOOK (replaces framer-motion) ──────────────────── */
+/* ── REVEAL HOOK ──────────────────────────────────────────────── */
 function useReveal(threshold = 0.15) {
   const ref = useRef(null)
   useEffect(() => {
@@ -112,7 +112,7 @@ function ScrollProgress() {
   return <div className="scroll-progress" ref={ref} />
 }
 
-/* ── COUNT UP ──────────────────────────────────────────────── */
+/* ── COUNT UP — FIX: wrapper span owns font-size as inline style, outside gradient-clip child ── */
 function CountUp({ to, suffix = '', duration = 1800 }) {
   const [val, setVal] = useState(0)
   const ref = useRef(null)
@@ -138,7 +138,11 @@ function CountUp({ to, suffix = '', duration = 1800 }) {
     io.observe(el)
     return () => io.disconnect()
   }, [to, duration])
-  return <span ref={ref}>{val}{suffix}</span>
+  return (
+    <span ref={ref} style={{ fontSize: 'inherit', fontFamily: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', display: 'block' }}>
+      <span className="stat-num">{val}{suffix}</span>
+    </span>
+  )
 }
 
 /* ── LABEL ─────────────────────────────────────────────────── */
@@ -180,10 +184,10 @@ function SectionShell({ children }) {
   )
 }
 
-/* ── SCROLL ROW ─────────────────────────────────────────────── */
+/* ── SCROLL ROW — FIX: translateZ(0) promotes to own GPU layer, stops vertical jitter on page scroll ── */
 function ScrollRow({ items, renderCard }) {
   return (
-    <div className="hscroll-wrap">
+    <div className="hscroll-wrap" style={{ transform: 'translateZ(0)' }}>
       <div className="hscroll">
         {items.map((item, i) => renderCard(item, i))}
       </div>
@@ -209,7 +213,7 @@ function PCard({ item, i }) {
   )
 }
 
-/* ── NAVBAR ─────────────────────────────────────────────────── */
+/* ── NAVBAR — FIX: mobile shows Menu · About · Order Now as flat inline row, no hamburger ── */
 function Navbar() {
   const [sc, setSc] = useState(false)
   useEffect(() => {
@@ -218,7 +222,7 @@ function Navbar() {
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
-  const links = [['Menu','#menu'],['Cakes','#cakes'],['Cookies','#cookies'],['About','#about'],['Contact','#contact']]
+  const desktopLinks = [['Menu','#menu'],['Cakes','#cakes'],['Cookies','#cookies'],['About','#about']]
 
   return (
     <nav
@@ -234,18 +238,14 @@ function Navbar() {
         transition: 'all .42s cubic-bezier(0.16,1,0.3,1)',
       }}
     >
-      <a
-        href="#home"
-        style={{ display: 'flex', alignItems: 'center', gap: '.7rem', textDecoration: 'none' }}
-      >
-        <div
-          style={{
-            width: 48, height: 48, borderRadius: '50%',
-            overflow: 'hidden',
-            boxShadow: '0 6px 20px rgba(184,134,11,.35), 0 0 0 2px rgba(255,255,255,.6), 0 0 0 3px rgba(184,134,11,.30)',
-            background: '#fff',
-          }}
-        >
+      {/* Logo */}
+      <a href="#home" style={{ display: 'flex', alignItems: 'center', gap: '.7rem', textDecoration: 'none' }}>
+        <div style={{
+          width: 48, height: 48, borderRadius: '50%',
+          overflow: 'hidden',
+          boxShadow: '0 6px 20px rgba(184,134,11,.35), 0 0 0 2px rgba(255,255,255,.6), 0 0 0 3px rgba(184,134,11,.30)',
+          background: '#fff',
+        }}>
           <img src="/logo.jpg" alt="Just Cake & Cookie" width={48} height={48} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
         <div>
@@ -258,20 +258,33 @@ function Navbar() {
         </div>
       </a>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1.7rem' }}>
-        <div style={{ display: 'flex', gap: '1.7rem' }} className="nav-links-row">
-          {links.map(([l, h]) => (
+      {/* Desktop nav */}
+      <div className="nav-desktop" style={{ display: 'flex', alignItems: 'center', gap: '1.7rem' }}>
+        <div style={{ display: 'flex', gap: '1.7rem' }}>
+          {desktopLinks.map(([l, h]) => (
             <a key={l} href={h} className="nav-link">{l}</a>
           ))}
         </div>
-        <a
-          href="#contact"
-          className="btn-dark"
-          style={{ height: 44, padding: '0 1.3rem', fontSize: 13 }}
-        >
+        <a href="#contact" className="btn-dark" style={{ height: 44, padding: '0 1.3rem', fontSize: 13 }}>
           Order Now <span style={{ fontSize: 14 }}>→</span>
         </a>
       </div>
+
+      {/* Mobile nav — flat inline row: Menu · About · Order Now */}
+      <div className="nav-mobile" style={{ display: 'none', alignItems: 'center', gap: '1rem' }}>
+        <a href="#menu"    className="nav-link">Menu</a>
+        <a href="#about"   className="nav-link">About</a>
+        <a href="#contact" className="btn-dark" style={{ height: 36, padding: '0 1rem', fontSize: 12 }}>
+          Order Now <span style={{ fontSize: 13 }}>→</span>
+        </a>
+      </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .nav-desktop { display: none !important; }
+          .nav-mobile  { display: flex !important; }
+        }
+      `}</style>
     </nav>
   )
 }
@@ -313,15 +326,14 @@ function Hero() {
             </a>
           </div>
 
-          <div className={`hero-stats ${cls} hero-enter-d5`}>
+          {/* <div className={`hero-stats ${cls} hero-enter-d5`}>
             <div className="hero-stat"><strong><CountUp to={50} suffix="+" /></strong><span>Signature flavours</span></div>
             <div className="hero-stat"><strong><CountUp to={7} /></strong><span>Cookie varieties</span></div>
             <div className="hero-stat"><strong><CountUp to={100} suffix="%" /></strong><span>Hand-finished</span></div>
-          </div>
+          </div> */}
         </div>
 
         <div className={entered ? 'hero-visual hero-visual-enter entered' : 'hero-visual hero-visual-enter'}>
-          <div className="hero-orb" />
           <div className="hero-ring" />
           <div className="hero-ring-2" />
 
@@ -469,15 +481,13 @@ function Cheesecake() {
           >
             <img src={IMG.cheesecake} alt="Cheesecake" width={560} height={560}
               style={{ width: '100%', aspectRatio: '1', objectFit: 'cover' }} loading="lazy" decoding="async" />
-            <div
-              style={{
-                position: 'absolute', top: 16, right: 16,
-                padding: '.5rem .9rem', borderRadius: 999,
-                background: 'rgba(255,254,249,.94)',
-                fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase',
-                color: 'var(--gold)', border: '1px solid rgba(184,134,11,.18)',
-              }}
-            >
+            <div style={{
+              position: 'absolute', top: 16, right: 16,
+              padding: '.5rem .9rem', borderRadius: 999,
+              background: 'rgba(255,254,249,.94)',
+              fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase',
+              color: 'var(--gold)', border: '1px solid rgba(184,134,11,.18)',
+            }}>
               ✨ Chef&apos;s Pick
             </div>
           </div>
@@ -505,13 +515,7 @@ function Contact() {
 
           <div ref={ref2} className="contact-list reveal reveal-d2">
             {CONTACTS.map(c => (
-              <a
-                key={c.label}
-                href={c.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-tile"
-              >
+              <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer" className="contact-tile">
                 <div className="contact-icon" style={{ background: `${c.color}1a`, boxShadow: `inset 0 0 0 1px ${c.color}30` }}>
                   <span style={{ fontSize: 22 }}>{c.icon}</span>
                 </div>
@@ -567,7 +571,7 @@ function About() {
   )
 }
 
-/* ── ABOUT STAT (extracted to avoid hook-in-loop) ────────────── */
+/* ── ABOUT STAT ────────────────────────────────────────────── */
 function AboutStat({ s, i }) {
   const ref = useReveal()
   return (
