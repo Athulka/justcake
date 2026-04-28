@@ -174,7 +174,7 @@ mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
 
 /* ── Horizontal scroll ── */
 /* gradient overlays removed — no ::before or ::after on hscroll-wrap */
-.hscroll { display: flex; overflow-x: auto; gap: 1.4rem; padding: .5rem .25rem 1rem; scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch }
+.hscroll { display: flex; overflow-x: clip; gap: 1.4rem; padding: .5rem .25rem 1rem; scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch }
 .hscroll::-webkit-scrollbar { display: none }
 .hscroll-wrap {
   position: relative;
