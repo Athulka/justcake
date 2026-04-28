@@ -194,6 +194,7 @@ mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   height: 100%;
+  border-radius: var(--r-md);
 }
 .hscroll::-webkit-scrollbar { display: none }
 
