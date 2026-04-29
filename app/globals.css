@@ -288,8 +288,8 @@ mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
 .hero-orb { position: absolute; width: 70%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 28% 28%, #fff5a0 0%, var(--gold-3) 38%, var(--gold-2) 70%, var(--gold) 100%); box-shadow: 0 50px 120px rgba(196,144,0,.38), inset -30px -30px 80px rgba(196,144,0,.22) }
 .hero-ring { position: absolute; width: 86%; aspect-ratio: 1; border-radius: 50%; border: 1px dashed rgba(184,134,11,.22) }
 .hero-ring-2 { position: absolute; width: 96%; aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(184,134,11,.10) }
-.hero-photo { position: relative; z-index: 2; width: min(400px, 78%); aspect-ratio: 1; border-radius: 34px; overflow: hidden; box-shadow: 0 40px 90px rgba(34,21,8,.28), 0 0 0 1px rgba(184,134,11,.20), inset 0 0 0 4px rgba(255,254,249,.92) }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover }
+.hero-photo { position: relative; z-index: 2; width: min(660px, 110%); border-radius: 34px; overflow: hidden; box-shadow: 0 40px 90px rgba(34,21,8,.28), 0 0 0 1px rgba(184,134,11,.20), inset 0 0 0 4px rgba(255,254,249,.92) }
+.hero-photo img { width: 100%; height: auto; display: block }
 .hero-chip { position: absolute; z-index: 3; padding: .85rem 1.2rem; border-radius: 22px; background: linear-gradient(135deg, rgba(255,254,249,.92), rgba(255,250,224,.85)); box-shadow: 0 18px 38px rgba(34,21,8,.14), 0 0 0 1px rgba(184,134,11,.16); font-size: 13px; font-weight: 500; color: var(--ink); white-space: nowrap; line-height: 1.3 }
 .hero-chip small { display: block; color: var(--gold); font-size: 9.5px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: .35rem }
 .hero-chip.a { top: 16%; left: -6% }

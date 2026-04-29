@@ -4,15 +4,27 @@ import { useEffect, useRef, useState } from 'react'
 
 /* ── ALL IMAGES ─────────────────────────────────────────────── */
 const IMG = {
-  heroBaking:   '/products/hero-baking.jpg',
+  heroBaking:   '/products/main pic.png',
   chocolate:    '/products/chocolate.jpg',
   vanilla:      '/products/vanilla.jpg',
   strawberry:   '/products/strawberry.jpg',
+  prettyInPink: '/products/pretty in pink.jpeg',
+  redEve:       '/products/red eve.jpeg',
+  goldenWish:   '/products/golden wish.jpeg',
+  fallenForest: '/products/fallen forest.jpeg',
   biscoff:      '/products/biscoff.jpg',
   freshFruit:   '/products/fresh-fruit.jpg',
   redVelvet:    '/products/red-velvet.jpg',
   heartCake:    '/products/heart-cake.jpg',
+  justYou:      '/products/just you.jpeg',
+  blackPearl:   '/products/black pearl.jpeg',
+  handsomeJin:  '/products/handsome jin.jpeg',
   blackForest:  '/products/black-forest.jpg',
+  sirensKiss:   '/products/sirens kiss.jpeg',
+  mrSunshine:   '/products/mr sunshine.jpeg',
+  darkSpell:    '/products/dark spell.jpeg',
+  velvetTemptation: '/products/velvet temptation.jpeg',
+  oreoCreamCake: '/products/oreo cream cake.jpeg',
   butterscotch: '/products/butterscotch.jpg',
   berryFruit:   '/products/fresh-fruit.jpg',
   chocTruffle:  '/products/choc-truffle.jpg',
@@ -25,35 +37,39 @@ const IMG = {
   almondSingle: '/products/almond-single.jpg',
   nutella2:     '/products/nutella-2.jpg',
   cheesecake:   '/products/cheesecake.jpg',
+  whatsapplogo: '/products/whatsapplogo.jpg',
+  insta:        '/products/insta logo.jpg',
+  gmail:        '/products/Gmail logo - United States.jpeg',
+  phonecalllogo:'/products/phonecall logo.jpeg',
 }
 
 /* ── DATA ───────────────────────────────────────────────────── */
 const PASTRIES = [
   { name: 'Death by Chocolate', sub: 'Chocolate',         img: IMG.chocolate,   desc: 'Deeply indulgent chocolate layers with velvety ganache frosting' },
   { name: 'Snow White',         sub: 'Vanilla',           img: IMG.vanilla,     desc: 'Delicate vanilla sponge with light cream and a dusting of sugar' },
-  { name: 'Pretty in Pink',     sub: 'Strawberry',        img: IMG.strawberry,  desc: 'Fluffy strawberry sponge with fresh berry compote filling' },
-  { name: 'Golden Wish',        sub: 'Biscoff & Caramel', img: IMG.biscoff,     desc: 'Buttery Biscoff crust with silky caramel cream layers' },
-  { name: 'Lost in Garden',     sub: 'Fresh Fruits',      img: IMG.freshFruit,  desc: 'Light sponge adorned with hand-picked seasonal fresh fruits' },
-  { name: 'Red Eve',            sub: 'Red Velvet',        img: IMG.redVelvet,   desc: 'Moist red velvet with smooth cream cheese frosting' },
+  { name: 'Pretty in Pink',     sub: 'Strawberry',        img: IMG.prettyInPink,  desc: 'Fluffy strawberry sponge with fresh berry compote filling' },
+  { name: 'Golden Wish',        sub: 'Biscoff & Caramel', img: IMG.goldenWish,     desc: 'Buttery Biscoff crust with silky caramel cream layers' },
+  { name: 'Lost in Garden',     sub: 'Fresh Fruits',      img: IMG.fallenForest,  desc: 'Light sponge adorned with hand-picked seasonal fresh fruits' },
+  { name: 'Red Eve',            sub: 'Red Velvet',        img: IMG.redEve,   desc: 'Moist red velvet with smooth cream cheese frosting' },
 ]
 const SIGNATURE = [
-  { name: "Siren's Kiss",      sub: 'Classic Vanilla',   img: IMG.vanilla,      desc: 'Soft vanilla sponge with smooth vanilla cream or buttercream' },
-  { name: 'Dark Spell',        sub: 'Chocolate Truffle', img: IMG.chocTruffle,  desc: 'Rich chocolate cake layered with silky ganache' },
-  { name: 'Velvet Temptation', sub: 'Red Velvet',        img: IMG.redVelvet,    desc: 'Moist red velvet with cream cheese or buttercream frosting' },
+  { name: "Siren's Kiss",      sub: 'Classic Vanilla',   img: IMG.sirensKiss,      desc: 'Soft vanilla sponge with smooth vanilla cream or buttercream' },
+  { name: 'Dark Spell',        sub: 'Chocolate Truffle', img: IMG.darkSpell,  desc: 'Rich chocolate cake layered with silky ganache' },
+  { name: 'Velvet Temptation', sub: 'Red Velvet',        img: IMG.velvetTemptation,    desc: 'Moist red velvet with cream cheese or buttercream frosting' },
   { name: 'Fallen Forest',     sub: 'Black Forest',      img: IMG.blackForest,  desc: 'Chocolate sponge with cherries and fresh cream' },
-  { name: 'Mr Sunshine',       sub: 'Butterscotch',      img: IMG.butterscotch, desc: 'Crunchy praline with silky caramel cream' },
+  { name: 'Mr Sunshine',       sub: 'Butterscotch',      img: IMG.mrSunshine, desc: 'Crunchy praline with silky caramel cream' },
   { name: 'Lost in Garden',    sub: 'Fresh Fruit Cake',  img: IMG.berryFruit,   desc: 'Light sponge adorned with seasonal fresh fruits' },
 ]
 const BENTO = [
-  { name: 'Just You',       sub: 'Red Heart',  img: IMG.heartCake,   desc: 'Intimate heart-shaped bento with velvety buttercream' },
-  { name: 'Black Pearl',    sub: 'Chocolate',  img: IMG.chocTruffle, desc: 'Mini chocolate cake with glossy dark ganache finish' },
-  { name: 'Handsome Jin',   sub: 'Purple',     img: IMG.ferrero,     desc: 'Elegant purple-tinted cake with subtle berry notes' },
-  { name: 'Pretty in Pink', sub: 'Strawberry', img: IMG.strawberry,  desc: 'Rosy strawberry bento with fresh berry topping' },
+  { name: 'Just You',       sub: 'Red Heart',  img: IMG.justYou,   desc: 'Intimate heart-shaped bento with velvety buttercream' },
+  { name: 'Black Pearl',    sub: 'Chocolate',  img: IMG.blackPearl, desc: 'Mini chocolate cake with glossy dark ganache finish' },
+  { name: 'Handsome Jin',   sub: 'Purple',     img: IMG.handsomeJin,     desc: 'Elegant purple-tinted cake with subtle berry notes' },
+  { name: 'Pretty in Pink', sub: 'Strawberry', img: IMG.prettyInPink,  desc: 'Rosy strawberry bento with fresh berry topping' },
 ]
 const PREMIUM = [
   { name: 'Golden Crown',    sub: 'Lotus Biscoff',    img: IMG.biscoffSlice, desc: 'Soft cake with Biscoff spread and cream'   },
   { name: 'Racing Ferrero',  sub: 'Ferrero Rocher',   img: IMG.ferrero,      desc: 'Chocolate cake with hazelnut crunch'       },
-  { name: 'Oreo Cream Cake', sub: 'Chocolate & Oreo', img: IMG.chocTruffle,  desc: 'Chocolate and Oreo loaded cream'           },
+  { name: 'Oreo Cream Cake', sub: 'Chocolate & Oreo', img: IMG.oreoCreamCake,  desc: 'Chocolate and Oreo loaded cream'           },
   { name: 'Lost in Garden',  sub: 'Fresh Fruit',      img: IMG.freshFruit,   desc: 'Light sponge with seasonal fresh fruits'   },
 ]
 const COOKIES = [
@@ -67,10 +83,10 @@ const COOKIES = [
 ]
 
 const CONTACTS = [
-  { label: 'WhatsApp',  sub: 'Chat with us directly',       icon: '💬', color: '#25D366', href: 'https://wa.me/918888888888'                  },
-  { label: 'Instagram', sub: '@justcakeandcookie',          icon: '📸', color: '#E1306C', href: 'https://instagram.com/justcakeandcookie'     },
-  { label: 'Email',     sub: 'hello@justcakeandcookie.com', icon: '✉️', color: '#c8860a', href: 'mailto:hello@justcakeandcookie.com'          },
-  { label: 'Call',      sub: '+91 88888 88888',             icon: '📞', color: '#3A1800', href: 'tel:+918888888888'                           },
+  { label: 'WhatsApp',  sub: 'Chat with us directly',           icon: IMG.whatsapplogo, color: '#25D366', href: 'https://wa.me/971506929524'                  },
+  { label: 'Instagram', sub: '@justcakeandcookie',              icon: IMG.insta, color: '#E1306C', href: 'https://instagram.com/justcakeandcookie'     },
+  { label: 'Email',     sub: 'justcakeandcookie@gmail.com',     icon: IMG.gmail, color: '#c8860a', href: 'mailto:justcakeandcookie@gmail.com'          },
+  { label: 'Call',      sub: '+971 50 692 9524',                icon: IMG.phonecalllogo, color: '#3A1800', href: 'tel:+971506929524'                           },
 ]
 
 const MARQUEE = ['Handcrafted Daily', '✦', 'Premium Ingredients', '✦', 'Made With Love', '✦', 'Bespoke Cakes', '✦', 'Artisan Cookies', '✦', 'Same-Day Delivery', '✦']
@@ -266,7 +282,7 @@ function Navbar() {
           ))}
         </div>
         <a href="#contact" className="btn-dark" style={{ height: 44, padding: '0 1.3rem', fontSize: 13 }}>
-          Order Now <span style={{ fontSize: 14 }}>→</span>
+          Order Now <span style={{ fontSize: 16 }}>→</span>
         </a>
       </div>
 
@@ -337,8 +353,8 @@ function Hero() {
           <div className="hero-ring" />
           <div className="hero-ring-2" />
 
-          <div className="hero-photo">
-            <img src={IMG.heroBaking} alt="Artisan cakes and cookies beautifully arranged" width={400} height={400} decoding="async" />
+          <div className="hero-photo" style={{ background: 'linear-gradient(145deg, #fff9e0, #fff3c4)' }}>
+            <img src={IMG.heroBaking} alt="Artisan cakes and cookies beautifully arranged" width={320} height={400} decoding="async" />
           </div>
 
           <span className="hero-sparkle" style={{ top: '12%',  right: '10%' }}>✦</span>
@@ -517,7 +533,7 @@ function Contact() {
             {CONTACTS.map(c => (
               <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer" className="contact-tile">
                 <div className="contact-icon" style={{ background: `${c.color}1a`, boxShadow: `inset 0 0 0 1px ${c.color}30` }}>
-                  <span style={{ fontSize: 22 }}>{c.icon}</span>
+                  <img src={c.icon} alt={c.label} width={36} height={36} style={{ width: 36, height: 36, objectFit: 'contain', borderRadius: 4 }} />
                 </div>
                 <div>
                   <div style={{ fontFamily: 'var(--fd)', fontSize: 18, lineHeight: 1.2, fontWeight: 600 }}>{c.label}</div>
@@ -617,10 +633,10 @@ function Footer() {
 
           <div style={{ display: 'flex', gap: '.7rem' }}>
             {[
-              { href: 'https://wa.me/918888888888',              icon: '💬', bg: '#25D366', label: 'WhatsApp' },
-              { href: 'https://instagram.com/justcakeandcookie', icon: '📸', bg: '#E1306C', label: 'Instagram' },
-              { href: 'mailto:hello@justcakeandcookie.com',      icon: '✉️', bg: '#c8860a', label: 'Email' },
-              { href: 'tel:+918888888888',                       icon: '📞', bg: '#3A1800', label: 'Call' },
+              { href: 'https://wa.me/971506929524',              icon: IMG.whatsapplogo, bg: '#25D366', label: 'WhatsApp' },
+              { href: 'https://instagram.com/justcakeandcookie', icon: IMG.insta, bg: '#E1306C', label: 'Instagram' },
+              { href: 'mailto:justcakeandcookie@gmail.com',      icon: IMG.gmail, bg: '#c8860a', label: 'Email' },
+              { href: 'tel:+971506929524',                       icon: IMG.phonecalllogo, bg: '#3A1800', label: 'Call' },
             ].map(s => (
               <a
                 key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
@@ -632,7 +648,7 @@ function Footer() {
                   border: '1px solid rgba(255,255,255,.10)',
                   transition: 'transform .3s ease',
                 }}
-              >{s.icon}</a>
+              ><img src={s.icon} alt={s.label} width={28} height={28} style={{ width: 28, height: 28, objectFit: 'contain', borderRadius: 4 }} /></a>
             ))}
           </div>
         </div>
