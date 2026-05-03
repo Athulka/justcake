@@ -211,8 +211,6 @@ const FLOWERS = [
   { img: IMG.flowers_combo_6 },
   { img: IMG.flowers_combo_7 },
   { img: IMG.flowers_combo_8 },
-  { img: IMG.butterscotch },
-  { img: IMG.heartCake },
 ]
 
 
@@ -739,7 +737,7 @@ function TopBrand() {
 
 function Navbar() {
 
-  const desktopLinks = [['Pastries','#menu'],['Signature','#cakes'],['Bento','#bento'],['Premium','#premium'],['Cookies','#cookies'],['JCC Blooms','#flowers'],['About','#about'],['Contact','#contact']]
+  const desktopLinks = [['Signature','#cakes'],['Pastries','#menu'],['Bento','#bento'],['Premium','#premium'],['Cookies','#cookies'],['JCC Blooms','#flowers'],['About','#about'],['Contact','#contact']]
 
 
 
@@ -995,7 +993,7 @@ function Hero() {
 
             <br />
 
-            <em className={`${cls} hero-enter-d3`} style={{ display: 'inline-block', color: '#b8860b', background: 'none', WebkitBackgroundClip: 'initial', WebkitTextFillColor: '#1A1208', fontSize: '44.8px', fontFamily: 'Taviraj, georgia, serif', fontStyle: 'normal' }}>elegant cravings</em>
+            <em className={`${cls} hero-enter-d3`} style={{ display: 'inline-block', color: '#b8860b', background: 'none', WebkitBackgroundClip: 'initial', WebkitTextFillColor: '#1A1208', fontFamily: 'Taviraj, georgia, serif', fontStyle: 'normal' }}>elegant cravings</em>
 
           </h1>
 
@@ -1684,9 +1682,9 @@ export default function Page() {
 
         <MarqueeStrip />
 
-        <Pastries />
-
         <SignatureCakes />
+
+        <Pastries />
 
         <BentoCakes />
 
