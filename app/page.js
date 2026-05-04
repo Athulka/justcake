@@ -137,7 +137,7 @@ const IMG = {
 
 const SIGNATURE = [
 
-  { name: "Siren's Kiss",      sub: 'Classic Vanilla',   img: IMG.sirensKiss,      desc: 'Soft vanilla sponge with smooth vanilla cream or buttercream', price: 99 },
+  { name: "Siren's Kiss",      sub: 'Classic Vanilla',   img: IMG.sirensKiss,      desc: 'Soft vanilla sponge with smooth vanilla cream', price: 99 },
 
   { name: 'Dark Spell',        sub: 'Chocolate Truffle', img: IMG.darkSpell,  desc: 'Rich chocolate cake layered with silky ganache', price: 99 },
 
@@ -147,21 +147,19 @@ const SIGNATURE = [
 
   { name: 'Mr Sunshine',       sub: 'Butterscotch',      img: IMG.mrSunshine, desc: 'Crunchy praline with silky caramel cream', price: 99 },
 
-  { name: 'Lost in Garden',    sub: 'Fresh Fruit Cake',  img: IMG.berryFruit,   desc: 'Light sponge adorned with seasonal fresh fruits', price: 99 },
-
 ]
 
 const PASTRIES = [
 
-  { name: 'Death by Chocolate', sub: 'Chocolate',         img: IMG.chocolate,   desc: 'Deeply indulgent chocolate layers with velvety ganache frosting', price: 22 },
+  { name: 'Death by Chocolate', sub: 'Chocolate',         img: IMG.chocolate,   desc: 'Velvety ganache frosts indulgent chocolate layers', price: 22 },
 
-  { name: 'Snow White',         sub: 'Vanilla',           img: IMG.vanilla,     desc: 'Delicate vanilla sponge with light cream and a dusting of sugar', price: 22 },
+  { name: 'Snow White',         sub: 'Vanilla',           img: IMG.vanilla,     desc: 'Light cream covers delicate vanilla sponge', price: 22 },
 
   { name: 'Pretty in Pink',     sub: 'Strawberry',        img: IMG.prettyInPinkNew,  desc: 'Fluffy strawberry sponge with fresh berry compote filling', price: 22 },
 
   { name: 'Golden Wish',        sub: 'Biscoff & Caramel', img: IMG.goldenWish,     desc: 'Buttery Biscoff crust with silky caramel cream layers', price: 22 },
 
-  { name: 'Lost in Garden',     sub: 'Fresh Fruits',      img: IMG.lost,  desc: 'Light sponge adorned with hand-picked seasonal fresh fruits', price: 22 },
+  { name: 'Lost in Garden',     sub: 'Fresh Fruits',      img: IMG.lost,  desc: 'Light sponge adorned with seasonal fruits', price: 22 },
 
   { name: 'Red Eve',            sub: 'Red Velvet',        img: IMG.redEve,   desc: 'Moist red velvet with smooth cream cheese frosting', price: 22 },
 
@@ -203,7 +201,7 @@ const PREMIUM = [
 
 const COOKIES = [
 
-  { name: 'Classic Chocolate Chip', img: IMG.chipStack,    desc: 'Golden-edged, chewy centre with premium chocolate chips', price: 12 },
+  { name: 'Chocolate Chip', img: IMG.chipStack,    desc: 'Golden-edged, chewy centre with premium chocolate chips', price: 12 },
 
   { name: 'Double Chocolate',       img: IMG.nutella2,     desc: 'Rich cocoa dough loaded with dark chocolate chunks', price: 12 },
 
@@ -495,84 +493,125 @@ function SectionShell({ children }) {
 /* ── SCROLL ROW — FIX: translateZ(0) promotes to own GPU layer, stops vertical jitter on page scroll ── */
 
 function ScrollRow({ items, renderCard }) {
-
   const scrollRef = useRef(null)
-
+  const directionRef = useRef(1) // 1 = right, -1 = left
   const [isPaused, setIsPaused] = useState(false)
-
+  const [isUserScrolling, setIsUserScrolling] = useState(false)
   const inactivityTimerRef = useRef(null)
+  const userScrollTimerRef = useRef(null)
+  const animationRef = useRef(null)
+  const lastScrollPosRef = useRef(0)
 
+  // Continuous smooth auto-scroll using requestAnimationFrame
   useEffect(() => {
+    if (isPaused || isUserScrolling) return
 
-    const scrollContainer = scrollRef.current
+    let lastTime = performance.now()
+    const scrollSpeed = 10 // pixels per millisecond (adjust for speed)
 
-    if (!scrollContainer) return
+    const animate = (currentTime) => {
+      const deltaTime = currentTime - lastTime
+      lastTime = currentTime
 
-    let intervalId
-
-    const autoScroll = () => {
-
-      if (!isPaused && scrollContainer) {
-
-        const cardWidth = scrollContainer.firstChild?.offsetWidth || 250
-
-        const scrollAmount = cardWidth + 16
-
-        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth
-
-        if (scrollContainer.scrollLeft >= maxScroll - 10) {
-
-          scrollContainer.scrollTo({ left: 0, behavior: 'smooth' })
-
-        } else {
-
-          scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' })
-
+      if (scrollRef.current) {
+        const currentScroll = scrollRef.current.scrollLeft
+        const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth
+        const cardWidth = 224 // card width (210px) + gap (14px)
+        
+        // Calculate new scroll position
+        let newScroll = currentScroll + (directionRef.current * scrollSpeed * deltaTime)
+        
+        // Check boundaries and reverse direction
+        if (newScroll >= maxScroll) {
+          directionRef.current = -1
+          newScroll = maxScroll
+        } else if (newScroll <= 0) {
+          directionRef.current = 1
+          newScroll = 0
         }
-
+        
+        scrollRef.current.scrollLeft = newScroll
+        lastScrollPosRef.current = newScroll
       }
 
+      animationRef.current = requestAnimationFrame(animate)
     }
 
-    intervalId = setInterval(autoScroll, 3000)
+    animationRef.current = requestAnimationFrame(animate)
 
     return () => {
-
-      clearInterval(intervalId)
-
-      if (inactivityTimerRef.current) {
-
-        clearTimeout(inactivityTimerRef.current)
-
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
       }
-
     }
+  }, [isPaused, isUserScrolling])
 
-  }, [isPaused])
-
-  const resetInactivityTimer = () => {
-
-    setIsPaused(true)
-
-    if (inactivityTimerRef.current) {
-
-      clearTimeout(inactivityTimerRef.current)
-
-    }
-
-    inactivityTimerRef.current = setTimeout(() => {
-
-      setIsPaused(false)
-
-    }, 8000) // 8 seconds
-
-  }
-
+  // Handle manual scroll - detect user interaction
   const handleScroll = () => {
-
-    resetInactivityTimer()
-
+    if (!scrollRef.current) return
+    
+    setIsUserScrolling(true)
+    
+    // Clear existing user scroll timer
+    if (userScrollTimerRef.current) {
+      clearTimeout(userScrollTimerRef.current)
+    }
+    
+    // Set timer to detect when user stops scrolling
+    userScrollTimerRef.current = setTimeout(() => {
+      const currentScroll = scrollRef.current.scrollLeft
+      const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth
+      
+      // Determine direction based on where user stopped
+      if (currentScroll >= maxScroll - 10) {
+        directionRef.current = -1
+      } else if (currentScroll <= 10) {
+        directionRef.current = 1
+      }
+      
+      lastScrollPosRef.current = currentScroll
+      setIsUserScrolling(false)
+    }, 200) // Wait 200ms after scroll stops
   }
+
+  // Handle card click - pause scrolling
+  const handleCardClick = (index) => {
+    setIsPaused(true)
+    
+    // Scroll to clicked card
+    if (scrollRef.current) {
+      const cardWidth = 224
+      scrollRef.current.scrollTo({
+        left: index * cardWidth,
+        behavior: 'smooth'
+      })
+    }
+    
+    // Clear existing timer
+    if (inactivityTimerRef.current) {
+      clearTimeout(inactivityTimerRef.current)
+    }
+    
+    // Set new timer to resume after 10 seconds
+    inactivityTimerRef.current = setTimeout(() => {
+      setIsPaused(false)
+    }, 10000)
+  }
+
+  // Cleanup timers on unmount
+  useEffect(() => {
+    return () => {
+      if (inactivityTimerRef.current) {
+        clearTimeout(inactivityTimerRef.current)
+      }
+      if (userScrollTimerRef.current) {
+        clearTimeout(userScrollTimerRef.current)
+      }
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
+    }
+  }, [])
 
   return (
 
@@ -584,9 +623,13 @@ function ScrollRow({ items, renderCard }) {
 
     >
 
-      <div ref={scrollRef} className="hscroll" onScroll={handleScroll}>
+      <div className="hscroll" ref={scrollRef} onScroll={handleScroll}>
 
-        {items.map((item, i) => renderCard(item, i))}
+        {items.map((item, i) => (
+          <div key={i} onClick={() => handleCardClick(i)}>
+            {renderCard(item, i)}
+          </div>
+        ))}
 
       </div>
 
