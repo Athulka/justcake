@@ -256,13 +256,13 @@ const GIFT_HAMPERS = [
 
 const CONTACTS = [
 
-  { label: 'WhatsApp',  sub: 'Chat with us directly',           icon: IMG.whatsapplogo, color: '#25D366', href: 'https://wa.me/971506929524'                  },
+  { label: 'WhatsApp',  sub: '+971 58 620 6281',                icon: IMG.whatsapplogo, color: '#25D366', href: 'https://wa.me/971586206281'                  },
 
   { label: 'Instagram', sub: '@justcakeandcookie',              icon: IMG.insta, color: '#E1306C', href: 'https://instagram.com/justcakeandcookie'     },
 
   { label: 'Email',     sub: 'justcakeandcookie@gmail.com',     icon: IMG.gmail, color: '#c8860a', href: 'mailto:justcakeandcookie@gmail.com'          },
 
-  { label: 'Call',      sub: '+971 50 692 9524',                icon: IMG.phonecalllogo, color: '#3A1800', href: 'tel:+971506929524'                           },
+  { label: 'Call',      sub: '+971 58 620 6281',                icon: IMG.phonecalllogo, color: '#3A1800', href: 'tel:+971586206281'                           },
 
 ]
 
@@ -824,7 +824,7 @@ function TopBrand() {
 
       <div className="topbrand-right" style={{ display: 'flex', alignItems: 'center', gap: '1.8rem' }}>
 
-        <a href="tel:+971506929524" style={{ display: 'flex', alignItems: 'center', gap: '.6rem', textDecoration: 'none' }}>
+        <a href="tel:+971586206281" style={{ display: 'flex', alignItems: 'center', gap: '.6rem', textDecoration: 'none' }}>
 
           <img src={IMG.phonecalllogo} alt="Call" width={28} height={28} style={{ width: 28, height: 28, objectFit: 'contain' }} />
 
@@ -832,13 +832,13 @@ function TopBrand() {
 
             <div style={{ fontSize: 10, color: '#888', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>Call Us</div>
 
-            <div style={{ fontSize: 14, fontWeight: 700, color: '#3A1800' }}>+971 506929524</div>
+            <div style={{ fontSize: 14, fontWeight: 700, color: '#3A1800' }}>+971 58 620 6281</div>
 
           </div>
 
         </a>
 
-        <a href="https://wa.me/971506929524" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '.6rem', textDecoration: 'none' }}>
+        <a href="https://wa.me/971586206281" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '.6rem', textDecoration: 'none' }}>
 
           <img src={IMG.whatsapplogo} alt="WhatsApp" width={28} height={28} style={{ width: 28, height: 28, objectFit: 'contain' }} />
 
@@ -846,7 +846,7 @@ function TopBrand() {
 
             <div style={{ fontSize: 10, color: '#888', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>WhatsApp</div>
 
-            <div style={{ fontSize: 14, fontWeight: 700, color: '#25D366' }}>Chat with us</div>
+            <div style={{ fontSize: 14, fontWeight: 700, color: '#25D366' }}>+971 58 620 6281</div>
 
           </div>
 
@@ -1941,13 +1941,13 @@ function Footer() {
 
             {[
 
-              { href: 'https://wa.me/971506929524',              icon: IMG.whatsapplogo, bg: '#25D366', label: 'WhatsApp' },
+              { href: 'https://wa.me/971586206281',              icon: IMG.whatsapplogo, bg: '#25D366', label: 'WhatsApp' },
 
               { href: 'https://instagram.com/justcakeandcookie', icon: IMG.insta, bg: '#E1306C', label: 'Instagram' },
 
               { href: 'mailto:justcakeandcookie@gmail.com',      icon: IMG.gmail, bg: '#c8860a', label: 'Email' },
 
-              { href: 'tel:+971506929524',                       icon: IMG.phonecalllogo, bg: '#3A1800', label: 'Call' },
+              { href: 'tel:+971586206281',                       icon: IMG.phonecalllogo, bg: '#3A1800', label: 'Call' },
 
             ].map(s => (
 
