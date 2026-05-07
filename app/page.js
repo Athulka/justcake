@@ -131,125 +131,129 @@ const IMG = {
   gift_hamper_18: '/pictures/WhatsApp Image 2026-05-04 at 7.03.59 PM.jpeg',
   gift_hamper_19: '/pictures/WhatsApp Image 2026-05-04 at 7.04.00 PM.jpeg',
 
+  first_cake: '/pictures/first_cake.jpeg',
+  first_cookie: '/pictures/first_cookie.jpeg',
+  first_gift: '/pictures/first_gift.jpeg',
+  first_pastries: '/pictures/first_pastries.jpeg',
+  first_flower: '/pictures/first_flower.jpeg',
+
 }
 
 // ─── DATA ────────────────────────────────────────────────────────
 
 const SIGNATURE = [
 
-  { name: "Siren's Kiss",      sub: 'Classic Vanilla',   img: IMG.sirensKiss,      desc: 'Soft vanilla sponge with smooth vanilla cream', price: 99 },
+  { name: "Siren's Kiss",      sub: 'Classic Vanilla',   img: IMG.sirensKiss,      desc: 'Soft vanilla sponge with smooth vanilla cream', originalPrice: 99, price: 79 },
 
-  { name: 'Dark Spell',        sub: 'Chocolate Truffle', img: IMG.darkSpell,  desc: 'Rich chocolate cake layered with silky ganache', price: 99 },
+  { name: 'Dark Spell',        sub: 'Chocolate Truffle', img: IMG.darkSpell,  desc: 'Rich chocolate cake layered with silky ganache', originalPrice: 119, price: 89 },
 
-  { name: 'Velvet Temptation', sub: 'Red Velvet',        img: IMG.velvetTemptation,    desc: 'Moist red velvet with cream cheese or buttercream frosting', price: 99 },
+  { name: 'Velvet Temptation', sub: 'Red Velvet',        img: IMG.velvetTemptation,    desc: 'Moist red velvet with cream cheese or buttercream frosting', originalPrice: 119, price: 99 },
 
-  { name: 'Fallen Forest',     sub: 'Black Forest',      img: IMG.fallenForest,  desc: 'Chocolate sponge with cherries and fresh cream', price: 99 },
+  { name: 'Fallen Forest',     sub: 'Black Forest',      img: IMG.fallenForest,  desc: 'Chocolate sponge with cherries and fresh cream', originalPrice: 119, price: 109 },
 
-  { name: 'Mr Sunshine',       sub: 'Butterscotch',      img: IMG.mrSunshine, desc: 'Crunchy praline with silky caramel cream', price: 99 },
+  { name: 'Mr Sunshine',       sub: 'Butterscotch',      img: IMG.mrSunshine, desc: 'Crunchy praline with silky caramel cream', originalPrice: 129, price: 99 },
 
 ]
 
 const PASTRIES = [
 
-  { name: 'Death by Chocolate', sub: 'Chocolate',         img: IMG.chocolate,   desc: 'Velvety ganache frosts indulgent chocolate layers', price: 22 },
+  { name: 'Death by Chocolate', sub: 'Chocolate',         img: IMG.chocolate,   desc: 'Velvety ganache frosts indulgent chocolate layers', originalPrice: 27, price: 22 },
 
-  { name: 'Snow White',         sub: 'Vanilla',           img: IMG.vanilla,     desc: 'Light cream covers delicate vanilla sponge', price: 22 },
+  { name: 'Snow White',         sub: 'Vanilla',           img: IMG.vanilla,     desc: 'Light cream covers delicate vanilla sponge', originalPrice: 28, price: 19 },
 
-  { name: 'Pretty in Pink',     sub: 'Strawberry',        img: IMG.prettyInPinkNew,  desc: 'Fluffy strawberry sponge with fresh berry compote filling', price: 22 },
+  { name: 'Pretty in Pink',     sub: 'Strawberry',        img: IMG.prettyInPinkNew,  desc: 'Fluffy strawberry sponge with fresh berry compote filling', originalPrice: 26, price: 22 },
 
-  { name: 'Golden Wish',        sub: 'Biscoff & Caramel', img: IMG.goldenWish,     desc: 'Buttery Biscoff crust with silky caramel cream layers', price: 22 },
+  { name: 'Golden Wish',        sub: 'Biscoff & Caramel', img: IMG.goldenWish,     desc: 'Buttery Biscoff crust with silky caramel cream layers', originalPrice: 25, price: 21 },
 
-  { name: 'Lost in Garden',     sub: 'Fresh Fruits',      img: IMG.lost,  desc: 'Light sponge adorned with seasonal fruits', price: 22 },
+  { name: 'Lost in Garden',     sub: 'Fresh Fruits',      img: IMG.lost,  desc: 'Light sponge adorned with seasonal fruits', originalPrice: 25, price: 20 },
 
-  { name: 'Red Eve',            sub: 'Red Velvet',        img: IMG.redEve,   desc: 'Moist red velvet with smooth cream cheese frosting', price: 22 },
+  { name: 'Red Eve',            sub: 'Red Velvet',        img: IMG.redEve,   desc: 'Moist red velvet with smooth cream cheese frosting', originalPrice: 27, price: 21 },
 
 ]
 
 const BENTO = [
 
-  { name: 'Just You',       sub: 'Red Heart',     img: IMG.justYou,     desc: 'Intimate heart-shaped bento with velvety buttercream', price: 59 },
+  { name: 'Black Pearl',     sub: 'Dark Chocolate',   img: IMG.blackPearl,  desc: 'Rich dark chocolate bento with ganache', originalPrice: 59, price: 55 },
 
-  { name: 'Black Pearl',    sub: 'Chocolate',     img: IMG.blackPearl,  desc: 'Mini chocolate cake with glossy dark ganache finish', price: 59 },
+  { name: 'Just You',       sub: 'Strawberry',       img: IMG.justYou,     desc: 'Sweet strawberry bento with fresh cream', originalPrice: 69, price: 53 },
 
-  { name: 'Handsome Jin',   sub: 'Purple',        img: IMG.handsomeJin,  desc: 'Elegant purple-tinted cake with subtle berry notes', price: 59 },
+  { name: 'Handsome Jin',   sub: 'Matcha',           img: IMG.handsomeJin,  desc: 'Elegant matcha bento with red bean', originalPrice: 64, price: 59 },
 
-  { name: 'Pretty in Pink', sub: 'Strawberry',    img: IMG.prettyInPink, desc: 'Rosy strawberry bento with fresh berry topping', price: 59 },
+  { name: 'Pretty in Pink', sub: 'Pink Velvet',      img: IMG.prettyInPink, desc: 'Soft pink velvet bento with cream', originalPrice: 69, price: 59 },
 
-  { name: 'Hellon',         sub: 'Classic',       img: IMG.hellon,      desc: 'Delicate bento cake with smooth cream finish', price: 59 },
+  { name: 'Hellon',         sub: 'Vanilla Choco',    img: IMG.hellon,       desc: 'Vanilla chocolate marble bento', originalPrice: 69, price: 55 },
 
-  { name: 'Pink love',      sub: 'Strawberry',    img: IMG.pinkLove,    desc: 'Rosy pink bento with sweet strawberry notes', price: 59 },
+  { name: 'Purple wine',    sub: 'Berry',         img: IMG.purpleWine,  desc: 'Elegant purple bento with rich berry flavor', originalPrice: 59, price: 55 },
 
-  { name: 'Purple wine',    sub: 'Berry',         img: IMG.purpleWine,  desc: 'Elegant purple bento with rich berry flavor', price: 59 },
+  { name: 'Yellonn',        sub: 'Vanilla',       img: IMG.yellonn,     desc: 'Golden yellow bento with creamy vanilla layers', originalPrice: 59, price: 55 },
 
-  { name: 'Yellonn',        sub: 'Vanilla',       img: IMG.yellonn,     desc: 'Golden yellow bento with creamy vanilla layers', price: 59 },
-
-  { name: 'Casual red',     sub: 'Red Velvet',    img: IMG.casualRed,   desc: 'Casual red bento with smooth velvet texture', price: 59 },
+  { name: 'Casual red',     sub: 'Red Velvet',    img: IMG.casualRed,   desc: 'Casual red bento with smooth velvet texture', originalPrice: 61, price: 54 },
 
 ]
 
 const PREMIUM = [
 
-  { name: 'Golden Crown',    sub: 'Lotus Biscoff',    img: IMG.goldenCrown,  desc: 'Soft cake with Biscoff spread and cream',   price: 119 },
+  { name: 'Golden Crown',    sub: 'Lotus Biscoff',    img: IMG.goldenCrown,  desc: 'Soft cake with Biscoff spread and cream',   originalPrice: 121, price: 109 },
 
-  { name: 'Racing Ferrero',  sub: 'Ferrero Rocher',   img: IMG.racingFerrero, desc: 'Chocolate cake with hazelnut crunch',       price: 119 },
+  { name: 'Racing Ferrero',  sub: 'Ferrero Rocher',   img: IMG.racingFerrero, desc: 'Chocolate cake with hazelnut crunch',       originalPrice: 149, price: 129 },
 
-  { name: 'Oreo Cream Cake', sub: 'Chocolate & Oreo', img: IMG.oreoCreamCake,  desc: 'Chocolate and Oreo loaded cream',           price: 119 },
+  { name: 'Oreo Cream Cake', sub: 'Chocolate & Oreo', img: IMG.oreoCreamCake,  desc: 'Chocolate and Oreo loaded cream',           originalPrice: 139, price: 118 },
 
-  { name: 'Lost in Garden',  sub: 'Fresh Fruit',      img: IMG.lostInGarden,  desc: 'Light sponge with seasonal fresh fruits',   price: 119 },
+  { name: 'Lost in Garden',  sub: 'Fresh Fruit',      img: IMG.lostInGarden,  desc: 'Light sponge with seasonal fresh fruits',   originalPrice: 139, price: 129 },
 
 ]
 
 const COOKIES = [
 
-  { name: 'Chocolate Chip', img: IMG.chipStack,    desc: 'Golden-edged, chewy centre with premium chocolate chips', price: 12 },
+  { name: 'Chocolate Chip', img: IMG.chipStack,    desc: 'Golden-edged, chewy centre with premium chocolate chips', originalPrice: 18, price: 12 },
 
-  { name: 'Double Chocolate',       img: IMG.nutella2,     desc: 'Rich cocoa dough loaded with dark chocolate chunks', price: 12 },
+  { name: 'Double Chocolate',       img: IMG.nutella2,     desc: 'Rich cocoa dough loaded with dark chocolate chunks', originalPrice: 18, price: 13 },
 
-  { name: 'Butter Cookies',         img: IMG.almondSingle, desc: 'Crumbly, melt-in-your-mouth classic buttery rounds', price: 12 },
+  { name: 'Butter Cookies',         img: IMG.almondSingle, desc: 'Crumbly, melt-in-your-mouth classic buttery rounds', originalPrice: 16, price: 12 },
 
-  { name: 'Nutella Filled',         img: IMG.nutella,      desc: 'Soft cookie with a warm Nutella surprise inside', price: 12 },
+  { name: 'Nutella Filled',         img: IMG.nutella,      desc: 'Soft cookie with a warm Nutella surprise inside', originalPrice: 17, price: 11 },
 
-  { name: 'Lotus Biscoff',          img: IMG.cookies_lotusbiscoff, desc: 'Crisp Biscoff-spiced cookie with caramelised edge', price: 12 },
+  { name: 'Lotus Biscoff',          img: IMG.cookies_lotusbiscoff, desc: 'Crisp Biscoff-spiced cookie with caramelised edge', originalPrice: 16, price: 12 },
 
-  { name: 'Red Velvet',             img: IMG.rvCookie,     desc: 'Velvety red cookies with a cream cheese drizzle', price: 12 },
+  { name: 'Red Velvet',             img: IMG.rvCookie,     desc: 'Velvety red cookies with a cream cheese drizzle', originalPrice: 22, price: 13 },
 
-  { name: 'Almond Crunch',          img: IMG.almond,       desc: 'Toasted almond cookies with a satisfying crunch', price: 12 },
+  { name: 'Almond Crunch',          img: IMG.almond,       desc: 'Toasted almond cookies with a satisfying crunch', originalPrice: 22, price: 13 },
 
 ]
 
 
 
 const FLOWERS = [
-  { img: IMG.flowers_combo_1, price: 199 },
-  { img: IMG.flowers_combo_2, price: 199 },
-  { img: IMG.flowers_combo_3, price: 199 },
-  { img: IMG.flowers_combo_4, price: 199 },
-  { img: IMG.flowers_combo_5, price: 199 },
-  { img: IMG.flowers_combo_6, price: 199 },
-  { img: IMG.flowers_combo_7, price: 199 },
-  { img: IMG.flowers_combo_8, price: 199 },
+  { img: IMG.flowers_combo_1, price: 33 },
+  { img: IMG.flowers_combo_2, originalPrice: 249, price: 199 },
+  { img: IMG.flowers_combo_3, originalPrice: 199, price: 129 },
+  { img: IMG.flowers_combo_4, originalPrice: 199, price: 179 },
+  { img: IMG.flowers_combo_5, originalPrice: 199, price: 159 },
+  { img: IMG.flowers_combo_6, originalPrice: 169, price: 149 },
+  { img: IMG.flowers_combo_7, originalPrice: 139, price: 119 },
+  { img: IMG.flowers_combo_8, originalPrice: 199, price: 179 },
 ]
 
 const GIFT_HAMPERS = [
-  { img: IMG.gift_hamper_1, price: 149 },
-  { img: IMG.gift_hamper_2, price: 149 },
-  { img: IMG.gift_hamper_3, price: 149 },
-  { img: IMG.gift_hamper_4, price: 149 },
-  { img: IMG.gift_hamper_5, price: 149 },
-  { img: IMG.gift_hamper_6, price: 149 },
-  { img: IMG.gift_hamper_7, price: 149 },
-  { img: IMG.gift_hamper_8, price: 149 },
-  { img: IMG.gift_hamper_9, price: 199 },
-  { img: IMG.gift_hamper_10, price: 199 },
-  { img: IMG.gift_hamper_11, price: 199 },
-  { img: IMG.gift_hamper_12, price: 199 },
-  { img: IMG.gift_hamper_13, price: 199 },
-  { img: IMG.gift_hamper_14, price: 199 },
-  { img: IMG.gift_hamper_15, price: 199 },
-  { img: IMG.gift_hamper_16, price: 199 },
-  { img: IMG.gift_hamper_17, price: 199 },
-  { img: IMG.gift_hamper_18, price: 199 },
-  { img: IMG.gift_hamper_19, price: 199 },
+  { img: IMG.gift_hamper_1, originalPrice: 169, price: 149 },
+  { img: IMG.gift_hamper_2, originalPrice: 169, price: 155 },
+  { img: IMG.gift_hamper_3, originalPrice: 149, price: 133 },
+  { img: IMG.gift_hamper_4, originalPrice: 189, price: 139 },
+  { img: IMG.gift_hamper_5, originalPrice: 159, price: 149 },
+  { img: IMG.gift_hamper_6, originalPrice: 159, price: 145 },
+  { img: IMG.gift_hamper_7, originalPrice: 149, price: 133 },
+  { img: IMG.gift_hamper_8, originalPrice: 159, price: 139 },
+  { img: IMG.gift_hamper_9, originalPrice: 229, price: 199 },
+  { img: IMG.gift_hamper_10, originalPrice: 149, price: 129 },
+  { img: IMG.gift_hamper_11, originalPrice: 349, price: 299 },
+  { img: IMG.gift_hamper_12, originalPrice: 299, price: 249 },
+  { img: IMG.gift_hamper_13, originalPrice: 299, price: 269 },
+  { img: IMG.gift_hamper_14, originalPrice: 199, price: 169 },
+  { img: IMG.gift_hamper_15, originalPrice: 349, price: 299 },
+  { img: IMG.gift_hamper_16, originalPrice: 399, price: 309 },
+  { img: IMG.gift_hamper_17, originalPrice: 299, price: 279 },
+  { img: IMG.gift_hamper_18, originalPrice: 299, price: 259 },
+  { img: IMG.gift_hamper_19, originalPrice: 339, price: 299 },
 ]
 
 
@@ -661,8 +665,23 @@ function FlowerCard({ item, i, badge = '🌸' }) {
           borderRadius: '12px',
           boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
           border: '1px solid rgba(184,134,11,.2)',
-          backdropFilter: 'blur(8px)'
+          backdropFilter: 'blur(8px)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.5rem'
         }}>
+          {item.originalPrice && (
+            <span style={{
+              fontSize: '0.85rem',
+              fontWeight: 500,
+              color: '#999',
+              textDecoration: 'line-through',
+              fontFamily: 'var(--fd)',
+              letterSpacing: '0.3px'
+            }}>
+              AED {item.originalPrice}
+            </span>
+          )}
           <span style={{
             fontSize: '1rem',
             fontWeight: 700,
@@ -704,26 +723,33 @@ function PCard({ item, i, className }) {
 
         <div className="pcard-name">{item.name}</div>
 
-        {item.sub  && <div className="pcard-sub">{item.sub}</div>}
-
         {item.desc && <p className="pcard-desc">{item.desc}</p>}
 
         {item.price && (
           <div style={{
-            marginTop: 'auto',
+            marginTop: '0.5rem',
             borderTop: '1px solid rgba(184,134,11,.15)',
+            paddingTop: '0.5rem',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '0.5rem'
+            justifyContent: 'flex-end',
+            gap: '0.6rem',
+            flexShrink: 0
           }}>
+            {item.originalPrice && (
+              <span style={{
+                fontSize: '0.85rem',
+                fontWeight: 500,
+                color: '#999',
+                textDecoration: 'line-through',
+                fontFamily: 'var(--fd)',
+                letterSpacing: '0.3px'
+              }}>
+                AED {item.originalPrice}
+              </span>
+            )}
             <span style={{
-              fontSize: '0.85rem',
-              color: 'var(--muted)',
-              fontWeight: 500
-            }}>Price</span>
-            <span style={{
-              fontSize: '1.1rem',
+              fontSize: '1rem',
               fontWeight: 700,
               color: '#b8860b',
               fontFamily: 'var(--fd)',
@@ -1214,35 +1240,35 @@ function WhatWeOffer() {
 
   const categories = [
     {
-      icon: '🎂',
+      icon: IMG.first_cake,
       title: 'CAKES',
       items: ['Signature', 'Bento', 'Premium'],
       link: '#cakes',
       color: '#b8860b'
     },
     {
-      icon: '🍪',
+      icon: IMG.first_cookie,
       title: 'COOKIES',
       items: ['Artisan', 'Hand-Baked', 'Classic'],
       link: '#cookies',
       color: '#c8860a'
     },
     {
-      icon: '🌸',
+      icon: IMG.first_flower,
       title: 'FLOWERS',
       items: ['Floral', 'Combos'],
       link: '#flowers',
       color: '#e1306c'
     },
     {
-      icon: '🎁',
+      icon: IMG.first_gift,
       title: 'GIFT HAMPERS',
       items: ['Premium', 'Custom'],
       link: '#gift-hampers',
       color: '#b8860b'
     },
     {
-      icon: '🥐',
+      icon: IMG.first_pastries,
       title: 'PASTRIES',
       items: ['Chocolate', 'Vanilla', 'Strawberry'],
       link: '#menu',
@@ -1278,7 +1304,13 @@ function WhatWeOffer() {
                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(184,134,11,.10)'
               }}
             >
-              <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>{cat.icon}</div>
+              <div style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'center' }}>
+                {typeof cat.icon === 'string' && cat.icon.startsWith('/') ? (
+                  <img src={cat.icon} alt={cat.title} width={60} height={60} style={{ objectFit: 'cover', borderRadius: '8px' }} />
+                ) : (
+                  <span style={{ fontSize: '2.5rem' }}>{cat.icon}</span>
+                )}
+              </div>
               <h3 style={{
                 fontFamily: 'var(--fd)',
                 fontSize: '1.25rem',
