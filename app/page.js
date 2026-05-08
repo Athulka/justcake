@@ -1256,14 +1256,14 @@ function WhatWeOffer() {
     {
       icon: IMG.first_flower,
       title: 'FLOWERS',
-      items: ['Floral', 'Combos'],
+      items: ['Floral', 'Combos', 'Bouquets'],
       link: '#flowers',
       color: '#e1306c'
     },
     {
       icon: IMG.first_gift,
       title: 'GIFT HAMPERS',
-      items: ['Premium', 'Custom'],
+      items: ['Premium', 'Custom', 'Seasonal'],
       link: '#gift-hampers',
       color: '#b8860b'
     },
@@ -1279,70 +1279,96 @@ function WhatWeOffer() {
   return (
     <section className="sec" style={{ padding: '3rem 2rem', background: 'linear-gradient(180deg, #fff9e0 0%, #ffffff 100%)' }}>
       <div style={{ maxWidth: 1320, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'nowrap', gap: '1rem', justifyContent: 'center', overflowX: 'auto', paddingBottom: '1rem' }}>
           {categories.map((cat, i) => (
             <a
               key={i}
               href={cat.link}
               style={{
                 display: 'block',
-                padding: '1.5rem',
+                position: 'relative',
+                width: '220px',
+                height: '220px',
                 borderRadius: '0',
-                background: '#fff',
-                boxShadow: '0 4px 16px rgba(184,134,11,.10)',
-                border: '1px solid rgba(184,134,11,.15)',
                 textDecoration: 'none',
                 transition: 'transform .3s ease, box-shadow .3s ease',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                overflow: 'hidden',
+                flexShrink: 0
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-4px)'
                 e.currentTarget.style.boxShadow = '0 8px 24px rgba(184,134,11,.18)'
+                const bg = e.currentTarget.querySelector('div[style*="backgroundImage"]')
+                if (bg) bg.style.transform = 'scale(1.05)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)'
                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(184,134,11,.10)'
+                const bg = e.currentTarget.querySelector('div[style*="backgroundImage"]')
+                if (bg) bg.style.transform = 'scale(1)'
               }}
             >
-              <div style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'center' }}>
-                {typeof cat.icon === 'string' && cat.icon.startsWith('/') ? (
-                  <img src={cat.icon} alt={cat.title} width={60} height={60} style={{ objectFit: 'cover', borderRadius: '8px' }} />
-                ) : (
-                  <span style={{ fontSize: '2.5rem' }}>{cat.icon}</span>
-                )}
-              </div>
-              <h3 style={{
-                fontFamily: 'var(--fd)',
-                fontSize: '1.25rem',
-                fontWeight: 700,
-                color: cat.color,
-                marginBottom: '0.5rem',
-                letterSpacing: '1.5px',
-                textTransform: 'uppercase'
-              }}>
-                {cat.title}
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
-                {cat.items.map((item, j) => (
-                  <span key={j} style={{
-                    fontSize: '0.85rem',
-                    color: 'var(--muted)',
-                    fontWeight: 500
-                  }}>
-                    {item}
-                  </span>
-                ))}
-              </div>
+              {/* Background Image */}
               <div style={{
-                marginTop: '1rem',
-                fontSize: '0.85rem',
-                color: cat.color,
+                position: 'absolute',
+                inset: 0,
+                backgroundImage: `url(${cat.icon})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                transition: 'transform 0.5s ease'
+              }} />
+              {/* Dark Overlay */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%)'
+              }} />
+              {/* Content */}
+              <div style={{
+                position: 'relative',
+                zIndex: 1,
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
+                padding: '1rem'
+              }}>
+                <h3 style={{
+                  fontFamily: 'var(--fd)',
+                  fontSize: '1.2rem',
+                  fontWeight: 700,
+                  color: '#fff',
+                  marginBottom: '0.4rem',
+                  letterSpacing: '1.5px',
+                  textTransform: 'uppercase',
+                  textShadow: '0 2px 8px rgba(0,0,0,0.5)'
+                }}>
+                  {cat.title}
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                  {cat.items.map((item, j) => (
+                    <span key={j} style={{
+                      fontSize: '0.75rem',
+                      color: '#fff',
+                      fontWeight: 500,
+                      textShadow: '0 1px 4px rgba(0,0,0,0.5)'
+                    }}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <div style={{
+                  marginTop: '0.6rem',
+                  fontSize: '0.75rem',
+                  color: '#fff',
                 fontWeight: 600,
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.4rem'
+                gap: '0.3rem'
               }}>
-                Explore <span style={{ fontSize: '1rem' }}>→</span>
+                Explore <span style={{ fontSize: '0.85rem' }}>→</span>
+              </div>
               </div>
             </a>
           ))}

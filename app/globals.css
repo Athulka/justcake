@@ -554,13 +554,14 @@ mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
 .footer-shell { border-radius: 0; padding: 1.4rem 1.2rem }
 .marquee-track span { font-size: 1.1rem }
 .hscroll-wrap { height: 340px }
+.sec[style*="padding"] { padding: '2rem 1.2rem' }
 }
 @media (max-width: 480px) {
 .pcard { width: 200px; height: 300px }
 .pcard-body { padding: .7rem .8rem .85rem }
 .pcard-name { font-size: 0.95rem }
 .pcard-desc { font-size: 9.5px; min-height: 2.2rem; line-height: 1.35 }
-.pcard-body div[style*="marginTop: 0.5rem"] { padding-top: 0.35rem; gap: 0.4rem }
-.pcard-body div[style*="marginTop: 0.5rem"] span:first-child { font-size: 0.75rem }
-.pcard-body div[style*="marginTop: 0.5rem"] span:last-child { font-size: 0.9rem }
+.pcard-body div[style*="margin-top: 0.5rem"] { padding-top: 0.35rem; gap: 0.4rem }
+.pcard-body div[style*="margin-top: 0.5rem"] span:first-child { font-size: 0.75rem }
+.pcard-body div[style*="margin-top: 0.5rem"] span:last-child { font-size: 0.9rem }
 }
