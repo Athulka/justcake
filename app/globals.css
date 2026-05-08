@@ -181,17 +181,13 @@ mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
 }
 .hscroll {
   display: flex;
-  /* align-items: flex-start — cards don't stretch to fill container height */
   align-items: flex-start;
   overflow-x: auto;
-  overflow-y: hidden;
   gap: 1.4rem;
   padding: .5rem .25rem 1rem;
   scrollbar-width: none;
-  -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
-  height: 100%;
-  border-radius: 0;
+  scroll-snap-type: x mandatory; /* Force snapping for a high-end feel */
   scroll-behavior: smooth;
 }
 .hscroll::-webkit-scrollbar { display: none }

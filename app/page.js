@@ -496,151 +496,105 @@ function SectionShell({ children }) {
 
 /* ── SCROLL ROW — FIX: translateZ(0) promotes to own GPU layer, stops vertical jitter on page scroll ── */
 
+/* ── SCROLL ROW — UPDATED: Discrete Step Scrolling ── */
 function ScrollRow({ items, renderCard }) {
   const scrollRef = useRef(null)
-  const directionRef = useRef(1) // 1 = right, -1 = left
   const [isPaused, setIsPaused] = useState(false)
   const [isUserScrolling, setIsUserScrolling] = useState(false)
-  const inactivityTimerRef = useRef(null)
+  const timerRef = useRef(null)
   const userScrollTimerRef = useRef(null)
-  const animationRef = useRef(null)
-  const lastScrollPosRef = useRef(0)
+  
+  const CARD_WIDTH = 224; // 210px card + 14px gap (1.4rem)
 
-  // Continuous smooth auto-scroll using requestAnimationFrame
-  useEffect(() => {
-    if (isPaused || isUserScrolling) return
+  const scrollToNext = () => {
+    if (!scrollRef.current) return
 
-    let lastTime = performance.now()
-    const scrollSpeed = 10 // pixels per millisecond (adjust for speed)
+    const container = scrollRef.current
+    const maxScroll = container.scrollWidth - container.clientWidth
+    
+    // Calculate which item we are currently on
+    const currentPos = container.scrollLeft
+    let nextPos = currentPos + CARD_WIDTH
 
-    const animate = (currentTime) => {
-      const deltaTime = currentTime - lastTime
-      lastTime = currentTime
-
-      if (scrollRef.current) {
-        const currentScroll = scrollRef.current.scrollLeft
-        const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth
-        const cardWidth = 224 // card width (210px) + gap (14px)
-
-        // Calculate new scroll position
-        let newScroll = currentScroll + (directionRef.current * scrollSpeed * deltaTime)
-
-        // Check boundaries and reverse direction
-        if (newScroll >= maxScroll) {
-          directionRef.current = -1
-          newScroll = maxScroll
-        } else if (newScroll <= 0) {
-          directionRef.current = 1
-          newScroll = 0
-        }
-
-        scrollRef.current.scrollLeft = newScroll
-        lastScrollPosRef.current = newScroll
-      }
-
-      animationRef.current = requestAnimationFrame(animate)
+    // If we've reached the end, snap back to the start
+    if (nextPos > maxScroll + 10) {
+      nextPos = 0
     }
 
-    animationRef.current = requestAnimationFrame(animate)
+    container.scrollTo({
+      left: nextPos,
+      behavior: 'smooth'
+    })
+  }
+
+  // Auto-scroll logic: Trigger every 3 seconds
+  useEffect(() => {
+    if (isPaused || isUserScrolling) {
+      if (timerRef.current) clearInterval(timerRef.current)
+      return
+    }
+
+    timerRef.current = setInterval(() => {
+      scrollToNext()
+    }, 3000) // 3 seconds of inactivity
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-      }
+      if (timerRef.current) clearInterval(timerRef.current)
     }
   }, [isPaused, isUserScrolling])
 
-  // Handle manual scroll - detect user interaction
+  // Detect when user is manually scrolling to prevent "fighting" the auto-scroll
   const handleScroll = () => {
     if (!scrollRef.current) return
-
+    
     setIsUserScrolling(true)
 
-    // Clear existing user scroll timer
-    if (userScrollTimerRef.current) {
-      clearTimeout(userScrollTimerRef.current)
-    }
-
-    // Set timer to detect when user stops scrolling
+    if (userScrollTimerRef.current) clearTimeout(userScrollTimerRef.current)
+    
+    // After 3 seconds of no manual scrolling, resume auto-scroll
     userScrollTimerRef.current = setTimeout(() => {
-      const currentScroll = scrollRef.current.scrollLeft
-      const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth
-
-      // Determine direction based on where user stopped
-      if (currentScroll >= maxScroll - 10) {
-        directionRef.current = -1
-      } else if (currentScroll <= 10) {
-        directionRef.current = 1
-      }
-
-      lastScrollPosRef.current = currentScroll
       setIsUserScrolling(false)
-    }, 200) // Wait 200ms after scroll stops
+    }, 3000)
   }
 
-  // Handle card click - pause scrolling
   const handleCardClick = (index) => {
     setIsPaused(true)
-
-    // Scroll to clicked card
+    
     if (scrollRef.current) {
-      const cardWidth = 224
       scrollRef.current.scrollTo({
-        left: index * cardWidth,
+        left: index * CARD_WIDTH,
         behavior: 'smooth'
       })
     }
 
-    // Clear existing timer
-    if (inactivityTimerRef.current) {
-      clearTimeout(inactivityTimerRef.current)
-    }
-
-    // Set new timer to resume after 10 seconds
-    inactivityTimerRef.current = setTimeout(() => {
-      setIsPaused(false)
-    }, 10000)
+    // Long pause on click (10 seconds) before resuming
+    if (timerRef.current) clearInterval(timerRef.current)
+    setTimeout(() => setIsPaused(false), 10000)
   }
 
-  // Cleanup timers on unmount
-  useEffect(() => {
-    return () => {
-      if (inactivityTimerRef.current) {
-        clearTimeout(inactivityTimerRef.current)
-      }
-      if (userScrollTimerRef.current) {
-        clearTimeout(userScrollTimerRef.current)
-      }
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-      }
-    }
-  }, [])
-
   return (
-
-    <div
-
-      className="hscroll-wrap"
-
-      style={{ transform: 'translateZ(0)' }}
-
-    >
-
-      <div className="hscroll" ref={scrollRef} onScroll={handleScroll}>
-
+    <div className="hscroll-wrap" style={{ transform: 'translateZ(0)' }}>
+      <div 
+        className="hscroll" 
+        ref={scrollRef} 
+        onScroll={handleScroll}
+        style={{ 
+          scrollSnapType: 'x proximity', // Encourages snapping to card edges
+          scrollBehavior: 'smooth' 
+        }}
+      >
         {items.map((item, i) => (
-          <div key={i} onClick={() => handleCardClick(i)}>
+          <div 
+            key={i} 
+            onClick={() => handleCardClick(i)}
+            style={{ scrollSnapAlign: 'start' }} // Snap point
+          >
             {renderCard(item, i)}
           </div>
         ))}
-
       </div>
-
     </div>
-
   )
-
 }
 
 
