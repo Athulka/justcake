@@ -13,71 +13,71 @@ if (typeof window !== 'undefined') {
 
 const IMG = {
 
-  almond:       '/pictures/cookies_almondcrunch.jpg',
+  almond: '/pictures/cookies_almondcrunch.jpg',
 
   almondSingle: '/pictures/cookies_buttercookies.jpg',
 
   cookies_lotusbiscoff: '/pictures/cookies_lotusbiscoff.png',
 
-  berryFruit:   '/pictures/signature_lostingarden.jpg',
+  berryFruit: '/pictures/signature_lostingarden.jpg',
 
-  blackForest:  '/pictures/signature_blackforest.jpg',
+  blackForest: '/pictures/signature_blackforest.jpg',
 
-  blackPearl:   '/pictures/bento_blackpearl.jpeg',
+  blackPearl: '/pictures/bento_blackpearl.jpeg',
 
   butterscotch: '/pictures/flowers_buttercupbliss.jpg',
 
-  casualRed:    '/pictures/bento_casualred.jpeg',
+  casualRed: '/pictures/bento_casualred.jpeg',
 
-  cheesecake:   '/pictures/cheesecake_classic.jpeg',
+  cheesecake: '/pictures/cheesecake_classic.jpeg',
 
-  cheesecake2:  '/pictures/cheesecake_special.jpeg',
+  cheesecake2: '/pictures/cheesecake_special.jpeg',
 
-  chipStack:    '/pictures/cookies_classicchocolatechip.jpg',
+  chipStack: '/pictures/cookies_classicchocolatechip.jpg',
 
-  chocTruffle:  '/pictures/flowers_chocolatetrufflerose.jpg',
+  chocTruffle: '/pictures/flowers_chocolatetrufflerose.jpg',
 
-  chocolate:    '/pictures/pastries_deathbychocolate.jpeg',
+  chocolate: '/pictures/pastries_deathbychocolate.jpeg',
 
-  darkSpell:    '/pictures/signature_darkspell.jpeg',
+  darkSpell: '/pictures/signature_darkspell.jpeg',
 
   fallenForest: '/pictures/signature_fallenforest.jpeg',
 
-  goldenCrown:  '/pictures/premium_goldencrown.png',
+  goldenCrown: '/pictures/premium_goldencrown.png',
 
-  goldenWish:   '/pictures/pastries_goldenwish.jpeg',
+  goldenWish: '/pictures/pastries_goldenwish.jpeg',
 
-  gmail:        '/pictures/Gmail logo - United States.jpeg',
+  gmail: '/pictures/Gmail logo - United States.jpeg',
 
-  handsomeJin:  '/pictures/bento_handsomejin.jpeg',
+  handsomeJin: '/pictures/bento_handsomejin.jpeg',
 
-  heartCake:    '/pictures/flowers_heartpetalcake.jpg',
+  heartCake: '/pictures/flowers_heartpetalcake.jpg',
 
-  hellon:       '/pictures/bento_hellon.jpeg',
+  hellon: '/pictures/bento_hellon.jpeg',
 
-  heroBaking:   '/products/main pic.png',
+  heroBaking: '/products/main pic.png',
 
-  insta:        '/pictures/insta logo.jpg',
+  insta: '/pictures/insta logo.jpg',
 
-  justYou:      '/pictures/bento_justyou.jpeg',
+  justYou: '/pictures/bento_justyou.jpeg',
 
-  lost:         '/pictures/pastries_lostingarden.png',
+  lost: '/pictures/pastries_lostingarden.png',
 
   lostInGarden: '/pictures/premium_lostingarden.png',
 
-  mrSunshine:   '/pictures/signature_mrsunshine.jpeg',
+  mrSunshine: '/pictures/signature_mrsunshine.jpeg',
 
-  nutella:      '/pictures/cookies_nutellafilled.jpg',
+  nutella: '/pictures/cookies_nutellafilled.jpg',
 
-  nutella2:     '/pictures/cookies_doublechocolate.jpg',
+  nutella2: '/pictures/cookies_doublechocolate.jpg',
 
   oreoCreamCake: '/pictures/premium_oreocreamcake.jpeg',
 
-  phonecalllogo:'/pictures/phonecall logo.jpeg',
+  phonecalllogo: '/pictures/phonecall logo.jpeg',
 
-  pinkLove:     '/pictures/bento_pinklove.jpeg',
+  pinkLove: '/pictures/bento_pinklove.jpeg',
 
-  purpleWine:   '/pictures/bento_purplewine.jpeg',
+  purpleWine: '/pictures/bento_purplewine.jpeg',
 
   prettyInPink: '/pictures/bento_prettyinpink.jpeg',
 
@@ -85,23 +85,23 @@ const IMG = {
 
   racingFerrero: '/pictures/premium_racingferrero.png',
 
-  redEve:       '/pictures/pastries_redeve.jpeg',
+  redEve: '/pictures/pastries_redeve.jpeg',
 
-  redVelvet:    '/pictures/flowers_velvetrosebloom.jpg',
+  redVelvet: '/pictures/flowers_velvetrosebloom.jpg',
 
-  rvCookie:     '/pictures/cookies_redvelvet.jpg',
+  rvCookie: '/pictures/cookies_redvelvet.jpg',
 
-  sirensKiss:   '/pictures/signature_sirenskiss.jpeg',
+  sirensKiss: '/pictures/signature_sirenskiss.jpeg',
 
-  strawberry:   '/pictures/flowers_rosegardendelight.jpg',
+  strawberry: '/pictures/flowers_rosegardendelight.jpg',
 
-  vanilla:      '/pictures/pastries_snowwhite.jpeg',
+  vanilla: '/pictures/pastries_snowwhite.jpeg',
 
   velvetTemptation: '/pictures/signature_velvettemptation.jpeg',
 
   whatsapplogo: '/pictures/whatsapplogo.jpg',
 
-  yellonn:      '/pictures/bento_yellonn.jpeg',
+  yellonn: '/pictures/bento_yellonn.jpeg',
 
   flowers_combo_1: '/pictures/flowers_combo_1.jpg',
   flowers_combo_2: '/pictures/flowers_combo_2.jpg',
@@ -143,81 +143,81 @@ const IMG = {
 
 const SIGNATURE = [
 
-  { name: "Siren's Kiss",      sub: 'Classic Vanilla',   img: IMG.sirensKiss,      desc: 'Soft vanilla sponge with smooth vanilla cream', originalPrice: 99, price: 79 },
+  { name: "Siren's Kiss", sub: 'Classic Vanilla', img: IMG.sirensKiss, desc: 'Soft vanilla sponge with smooth vanilla cream', originalPrice: 99, price: 79 },
 
-  { name: 'Dark Spell',        sub: 'Chocolate Truffle', img: IMG.darkSpell,  desc: 'Rich chocolate cake layered with silky ganache', originalPrice: 119, price: 89 },
+  { name: 'Dark Spell', sub: 'Chocolate Truffle', img: IMG.darkSpell, desc: 'Rich chocolate cake layered with silky ganache', originalPrice: 119, price: 89 },
 
-  { name: 'Velvet Temptation', sub: 'Red Velvet',        img: IMG.velvetTemptation,    desc: 'Moist red velvet with cream cheese or buttercream frosting', originalPrice: 119, price: 99 },
+  { name: 'Velvet Temptation', sub: 'Red Velvet', img: IMG.velvetTemptation, desc: 'Moist red velvet with cream cheese or buttercream frosting', originalPrice: 119, price: 99 },
 
-  { name: 'Fallen Forest',     sub: 'Black Forest',      img: IMG.fallenForest,  desc: 'Chocolate sponge with cherries and fresh cream', originalPrice: 119, price: 109 },
+  { name: 'Fallen Forest', sub: 'Black Forest', img: IMG.fallenForest, desc: 'Chocolate sponge with cherries and fresh cream', originalPrice: 119, price: 109 },
 
-  { name: 'Mr Sunshine',       sub: 'Butterscotch',      img: IMG.mrSunshine, desc: 'Crunchy praline with silky caramel cream', originalPrice: 129, price: 99 },
+  { name: 'Mr Sunshine', sub: 'Butterscotch', img: IMG.mrSunshine, desc: 'Crunchy praline with silky caramel cream', originalPrice: 129, price: 99 },
 
 ]
 
 const PASTRIES = [
 
-  { name: 'Death by Chocolate', sub: 'Chocolate',         img: IMG.chocolate,   desc: 'Velvety ganache frosts indulgent chocolate layers', originalPrice: 27, price: 22 },
+  { name: 'Death by Chocolate', sub: 'Chocolate', img: IMG.chocolate, desc: 'Velvety ganache frosts indulgent chocolate layers', originalPrice: 27, price: 22 },
 
-  { name: 'Snow White',         sub: 'Vanilla',           img: IMG.vanilla,     desc: 'Light cream covers delicate vanilla sponge', originalPrice: 28, price: 19 },
+  { name: 'Snow White', sub: 'Vanilla', img: IMG.vanilla, desc: 'Light cream covers delicate vanilla sponge', originalPrice: 28, price: 19 },
 
-  { name: 'Pretty in Pink',     sub: 'Strawberry',        img: IMG.prettyInPinkNew,  desc: 'Fluffy strawberry sponge with fresh berry compote filling', originalPrice: 26, price: 22 },
+  { name: 'Pretty in Pink', sub: 'Strawberry', img: IMG.prettyInPinkNew, desc: 'Fluffy strawberry sponge with fresh berry compote filling', originalPrice: 26, price: 22 },
 
-  { name: 'Golden Wish',        sub: 'Biscoff & Caramel', img: IMG.goldenWish,     desc: 'Buttery Biscoff crust with silky caramel cream layers', originalPrice: 25, price: 21 },
+  { name: 'Golden Wish', sub: 'Biscoff & Caramel', img: IMG.goldenWish, desc: 'Buttery Biscoff crust with silky caramel cream layers', originalPrice: 25, price: 21 },
 
-  { name: 'Lost in Garden',     sub: 'Fresh Fruits',      img: IMG.lost,  desc: 'Light sponge adorned with seasonal fruits', originalPrice: 25, price: 20 },
+  { name: 'Lost in Garden', sub: 'Fresh Fruits', img: IMG.lost, desc: 'Light sponge adorned with seasonal fruits', originalPrice: 25, price: 20 },
 
-  { name: 'Red Eve',            sub: 'Red Velvet',        img: IMG.redEve,   desc: 'Moist red velvet with smooth cream cheese frosting', originalPrice: 27, price: 21 },
+  { name: 'Red Eve', sub: 'Red Velvet', img: IMG.redEve, desc: 'Moist red velvet with smooth cream cheese frosting', originalPrice: 27, price: 21 },
 
 ]
 
 const BENTO = [
 
-  { name: 'Black Pearl',     sub: 'Dark Chocolate',   img: IMG.blackPearl,  desc: 'Rich dark chocolate bento with ganache', originalPrice: 59, price: 55 },
+  { name: 'Black Pearl', sub: 'Dark Chocolate', img: IMG.blackPearl, desc: 'Rich dark chocolate bento with ganache', originalPrice: 59, price: 55 },
 
-  { name: 'Just You',       sub: 'Strawberry',       img: IMG.justYou,     desc: 'Sweet strawberry bento with fresh cream', originalPrice: 69, price: 53 },
+  { name: 'Just You', sub: 'Strawberry', img: IMG.justYou, desc: 'Sweet strawberry bento with fresh cream', originalPrice: 69, price: 53 },
 
-  { name: 'Handsome Jin',   sub: 'Matcha',           img: IMG.handsomeJin,  desc: 'Elegant matcha bento with red bean', originalPrice: 64, price: 59 },
+  { name: 'Handsome Jin', sub: 'Matcha', img: IMG.handsomeJin, desc: 'Elegant matcha bento with red bean', originalPrice: 64, price: 59 },
 
-  { name: 'Pretty in Pink', sub: 'Pink Velvet',      img: IMG.prettyInPink, desc: 'Soft pink velvet bento with cream', originalPrice: 69, price: 59 },
+  { name: 'Pretty in Pink', sub: 'Pink Velvet', img: IMG.prettyInPink, desc: 'Soft pink velvet bento with cream', originalPrice: 69, price: 59 },
 
-  { name: 'Hellon',         sub: 'Vanilla Choco',    img: IMG.hellon,       desc: 'Vanilla chocolate marble bento', originalPrice: 69, price: 55 },
+  { name: 'Hellon', sub: 'Vanilla Choco', img: IMG.hellon, desc: 'Vanilla chocolate marble bento', originalPrice: 69, price: 55 },
 
-  { name: 'Purple wine',    sub: 'Berry',         img: IMG.purpleWine,  desc: 'Elegant purple bento with rich berry flavor', originalPrice: 59, price: 55 },
+  { name: 'Purple wine', sub: 'Berry', img: IMG.purpleWine, desc: 'Elegant purple bento with rich berry flavor', originalPrice: 59, price: 55 },
 
-  { name: 'Yellonn',        sub: 'Vanilla',       img: IMG.yellonn,     desc: 'Golden yellow bento with creamy vanilla layers', originalPrice: 59, price: 55 },
+  { name: 'Yellonn', sub: 'Vanilla', img: IMG.yellonn, desc: 'Golden yellow bento with creamy vanilla layers', originalPrice: 59, price: 55 },
 
-  { name: 'Casual red',     sub: 'Red Velvet',    img: IMG.casualRed,   desc: 'Casual red bento with smooth velvet texture', originalPrice: 61, price: 54 },
+  { name: 'Casual red', sub: 'Red Velvet', img: IMG.casualRed, desc: 'Casual red bento with smooth velvet texture', originalPrice: 61, price: 54 },
 
 ]
 
 const PREMIUM = [
 
-  { name: 'Golden Crown',    sub: 'Lotus Biscoff',    img: IMG.goldenCrown,  desc: 'Soft cake with Biscoff spread and cream',   originalPrice: 121, price: 109 },
+  { name: 'Golden Crown', sub: 'Lotus Biscoff', img: IMG.goldenCrown, desc: 'Soft cake with Biscoff spread and cream', originalPrice: 121, price: 109 },
 
-  { name: 'Racing Ferrero',  sub: 'Ferrero Rocher',   img: IMG.racingFerrero, desc: 'Chocolate cake with hazelnut crunch',       originalPrice: 149, price: 129 },
+  { name: 'Racing Ferrero', sub: 'Ferrero Rocher', img: IMG.racingFerrero, desc: 'Chocolate cake with hazelnut crunch', originalPrice: 149, price: 129 },
 
-  { name: 'Oreo Cream Cake', sub: 'Chocolate & Oreo', img: IMG.oreoCreamCake,  desc: 'Chocolate and Oreo loaded cream',           originalPrice: 139, price: 118 },
+  { name: 'Oreo Cream Cake', sub: 'Chocolate & Oreo', img: IMG.oreoCreamCake, desc: 'Chocolate and Oreo loaded cream', originalPrice: 139, price: 118 },
 
-  { name: 'Lost in Garden',  sub: 'Fresh Fruit',      img: IMG.lostInGarden,  desc: 'Light sponge with seasonal fresh fruits',   originalPrice: 139, price: 129 },
+  { name: 'Lost in Garden', sub: 'Fresh Fruit', img: IMG.lostInGarden, desc: 'Light sponge with seasonal fresh fruits', originalPrice: 139, price: 129 },
 
 ]
 
 const COOKIES = [
 
-  { name: 'Chocolate Chip', img: IMG.chipStack,    desc: 'Golden-edged, chewy centre with premium chocolate chips', originalPrice: 18, price: 12 },
+  { name: 'Chocolate Chip', img: IMG.chipStack, desc: 'Golden-edged, chewy centre with premium chocolate chips', originalPrice: 18, price: 12 },
 
-  { name: 'Double Chocolate',       img: IMG.nutella2,     desc: 'Rich cocoa dough loaded with dark chocolate chunks', originalPrice: 18, price: 13 },
+  { name: 'Double Chocolate', img: IMG.nutella2, desc: 'Rich cocoa dough loaded with dark chocolate chunks', originalPrice: 18, price: 13 },
 
-  { name: 'Butter Cookies',         img: IMG.almondSingle, desc: 'Crumbly, melt-in-your-mouth classic buttery rounds', originalPrice: 16, price: 12 },
+  { name: 'Butter Cookies', img: IMG.almondSingle, desc: 'Crumbly, melt-in-your-mouth classic buttery rounds', originalPrice: 16, price: 12 },
 
-  { name: 'Nutella Filled',         img: IMG.nutella,      desc: 'Soft cookie with a warm Nutella surprise inside', originalPrice: 17, price: 11 },
+  { name: 'Nutella Filled', img: IMG.nutella, desc: 'Soft cookie with a warm Nutella surprise inside', originalPrice: 17, price: 11 },
 
-  { name: 'Lotus Biscoff',          img: IMG.cookies_lotusbiscoff, desc: 'Crisp Biscoff-spiced cookie with caramelised edge', originalPrice: 16, price: 12 },
+  { name: 'Lotus Biscoff', img: IMG.cookies_lotusbiscoff, desc: 'Crisp Biscoff-spiced cookie with caramelised edge', originalPrice: 16, price: 12 },
 
-  { name: 'Red Velvet',             img: IMG.rvCookie,     desc: 'Velvety red cookies with a cream cheese drizzle', originalPrice: 22, price: 13 },
+  { name: 'Red Velvet', img: IMG.rvCookie, desc: 'Velvety red cookies with a cream cheese drizzle', originalPrice: 22, price: 13 },
 
-  { name: 'Almond Crunch',          img: IMG.almond,       desc: 'Toasted almond cookies with a satisfying crunch', originalPrice: 22, price: 13 },
+  { name: 'Almond Crunch', img: IMG.almond, desc: 'Toasted almond cookies with a satisfying crunch', originalPrice: 22, price: 13 },
 
 ]
 
@@ -260,13 +260,13 @@ const GIFT_HAMPERS = [
 
 const CONTACTS = [
 
-  { label: 'WhatsApp',  sub: '+971 58 620 6281',                icon: IMG.whatsapplogo, color: '#25D366', href: 'https://wa.me/971586206281'                  },
+  { label: 'WhatsApp', sub: '+971 58 620 6281', icon: IMG.whatsapplogo, color: '#25D366', href: 'https://wa.me/971586206281' },
 
-  { label: 'Instagram', sub: '@justcakeandcookie',              icon: IMG.insta, color: '#E1306C', href: 'https://instagram.com/justcakeandcookie'     },
+  { label: 'Instagram', sub: '@justcakeandcookie', icon: IMG.insta, color: '#E1306C', href: 'https://instagram.com/justcakeandcookie' },
 
-  { label: 'Email',     sub: 'justcakeandcookie@gmail.com',     icon: IMG.gmail, color: '#c8860a', href: 'mailto:justcakeandcookie@gmail.com'          },
+  { label: 'Email', sub: 'justcakeandcookie@gmail.com', icon: IMG.gmail, color: '#c8860a', href: 'mailto:justcakeandcookie@gmail.com' },
 
-  { label: 'Call',      sub: '+971 58 620 6281',                icon: IMG.phonecalllogo, color: '#3A1800', href: 'tel:+971586206281'                           },
+  { label: 'Call', sub: '+971 58 620 6281', icon: IMG.phonecalllogo, color: '#3A1800', href: 'tel:+971586206281' },
 
 ]
 
@@ -521,10 +521,10 @@ function ScrollRow({ items, renderCard }) {
         const currentScroll = scrollRef.current.scrollLeft
         const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth
         const cardWidth = 224 // card width (210px) + gap (14px)
-        
+
         // Calculate new scroll position
         let newScroll = currentScroll + (directionRef.current * scrollSpeed * deltaTime)
-        
+
         // Check boundaries and reverse direction
         if (newScroll >= maxScroll) {
           directionRef.current = -1
@@ -533,7 +533,7 @@ function ScrollRow({ items, renderCard }) {
           directionRef.current = 1
           newScroll = 0
         }
-        
+
         scrollRef.current.scrollLeft = newScroll
         lastScrollPosRef.current = newScroll
       }
@@ -553,26 +553,26 @@ function ScrollRow({ items, renderCard }) {
   // Handle manual scroll - detect user interaction
   const handleScroll = () => {
     if (!scrollRef.current) return
-    
+
     setIsUserScrolling(true)
-    
+
     // Clear existing user scroll timer
     if (userScrollTimerRef.current) {
       clearTimeout(userScrollTimerRef.current)
     }
-    
+
     // Set timer to detect when user stops scrolling
     userScrollTimerRef.current = setTimeout(() => {
       const currentScroll = scrollRef.current.scrollLeft
       const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth
-      
+
       // Determine direction based on where user stopped
       if (currentScroll >= maxScroll - 10) {
         directionRef.current = -1
       } else if (currentScroll <= 10) {
         directionRef.current = 1
       }
-      
+
       lastScrollPosRef.current = currentScroll
       setIsUserScrolling(false)
     }, 200) // Wait 200ms after scroll stops
@@ -581,7 +581,7 @@ function ScrollRow({ items, renderCard }) {
   // Handle card click - pause scrolling
   const handleCardClick = (index) => {
     setIsPaused(true)
-    
+
     // Scroll to clicked card
     if (scrollRef.current) {
       const cardWidth = 224
@@ -590,12 +590,12 @@ function ScrollRow({ items, renderCard }) {
         behavior: 'smooth'
       })
     }
-    
+
     // Clear existing timer
     if (inactivityTimerRef.current) {
       clearTimeout(inactivityTimerRef.current)
     }
-    
+
     // Set new timer to resume after 10 seconds
     inactivityTimerRef.current = setTimeout(() => {
       setIsPaused(false)
@@ -619,9 +619,9 @@ function ScrollRow({ items, renderCard }) {
 
   return (
 
-    <div 
+    <div
 
-      className="hscroll-wrap" 
+      className="hscroll-wrap"
 
       style={{ transform: 'translateZ(0)' }}
 
@@ -904,7 +904,7 @@ function TopBrand() {
 
 function Navbar() {
 
-  const desktopLinks = [['Cakes','#cakes'],['Premium','#premium'],['Bento','#bento'],['🌸 Flowers','#flowers'],['🎁 Gift Hampers','#gift-hampers'],['Pastries','#menu'],['Cookies','#cookies'],['About','#about'],['Contact','#contact']]
+  const desktopLinks = [['Cakes', '#cakes'], ['Premium', '#premium'], ['Bento', '#bento'], ['🌸 Flowers', '#flowers'], ['🎁 Gift Hampers', '#gift-hampers'], ['Pastries', '#menu'], ['Cookies', '#cookies'], ['About', '#about'], ['Contact', '#contact']]
 
 
 
@@ -914,7 +914,7 @@ function Navbar() {
 
       style={{
 
-        position: 'fixed', top: 80, left: 0, right: 0, zIndex: 200,
+        position: 'fixed', top: 85, left: 0, right: 0, zIndex: 200,
 
         display: 'flex', alignItems: 'center', justifyContent: 'center',
 
@@ -974,7 +974,7 @@ function Navbar() {
 
       <div className="nav-mobile" style={{ display: 'none', alignItems: 'center', gap: '.8rem', flexWrap: 'wrap', justifyContent: 'center' }}>
 
-        {[['Pastries','#menu'],['Cakes','#cakes'],['Bento','#bento'],['Cookies','#cookies'],['About','#about']].map(([l, h]) => (
+        {[['Pastries', '#menu'], ['Cakes', '#cakes'], ['Bento', '#bento'], ['Cookies', '#cookies'], ['About', '#about']].map(([l, h]) => (
 
           <a key={l} href={h} style={{ color: '#3A1800', textDecoration: 'none', fontSize: 11, fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>{l}</a>
 
@@ -1024,15 +1024,15 @@ function Navbar() {
 
 const SHOWCASE_ITEMS = [
 
-  { img: IMG.sirensKiss,       label: 'Signature Cakes', sub: 'Bespoke Celebrations' },
+  { img: IMG.sirensKiss, label: 'Signature Cakes', sub: 'Bespoke Celebrations' },
 
-  { img: IMG.goldenWish,       label: 'Pastries',        sub: 'Freshly Baked Daily'  },
+  { img: IMG.goldenWish, label: 'Pastries', sub: 'Freshly Baked Daily' },
 
-  { img: IMG.chipStack,        label: 'Cookies',         sub: 'Hand-Baked, Crisp'    },
+  { img: IMG.chipStack, label: 'Cookies', sub: 'Hand-Baked, Crisp' },
 
-  { img: IMG.velvetTemptation, label: 'Bento Cakes',     sub: 'Mini Masterpieces'    },
+  { img: IMG.velvetTemptation, label: 'Bento Cakes', sub: 'Mini Masterpieces' },
 
-  { img: IMG.cheesecake,       label: 'Cheesecake',      sub: 'Velvet Smooth'        },
+  { img: IMG.cheesecake, label: 'Cheesecake', sub: 'Velvet Smooth' },
 
 ]
 
@@ -1050,9 +1050,9 @@ function HeroShowcase() {
 
   const [leadIdx, setLeadIdx] = useState(0)
 
-  const [cardA, setCardA]     = useState(0)
+  const [cardA, setCardA] = useState(0)
 
-  const [cardB, setCardB]     = useState(0)
+  const [cardB, setCardB] = useState(0)
 
 
 
@@ -1218,7 +1218,7 @@ function Hero() {
 
         <svg width="22" height="34" viewBox="0 0 22 34">
 
-          <rect x="1" y="1" width="20" height="32" rx="10" fill="none" stroke="rgba(184,134,11,.40)" strokeWidth="1.5"/>
+          <rect x="1" y="1" width="20" height="32" rx="10" fill="none" stroke="rgba(184,134,11,.40)" strokeWidth="1.5" />
 
           <circle cx="11" cy="9" r="3" fill="var(--gold)" />
 
@@ -1236,8 +1236,9 @@ function Hero() {
 
 /* ── WHAT WE OFFER ─────────────────────────────────────────────── */
 
-function WhatWeOffer() {
+/* ── WHAT WE OFFER ─────────────────────────────────────────────── */
 
+function WhatWeOffer() {
   const categories = [
     {
       icon: IMG.first_cake,
@@ -1277,53 +1278,77 @@ function WhatWeOffer() {
   ]
 
   return (
-    <section className="sec" style={{ padding: '3rem 2rem', background: 'linear-gradient(180deg, #fff9e0 0%, #ffffff 100%)' }}>
+    <section className="sec" style={{ padding: '3rem 0', background: 'linear-gradient(180deg, #fff9e0 0%, #ffffff 100%)' }}>
       <div style={{ maxWidth: 1320, margin: '0 auto' }}>
-        <div style={{ display: 'flex', flexWrap: 'nowrap', gap: '1rem', justifyContent: 'center', overflowX: 'auto', paddingBottom: '1rem' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'nowrap',
+            gap: '1.2rem',
+            justifyContent: 'flex-start', // Fixed: Allows scrolling from the very beginning
+            overflowX: 'auto',
+            padding: '0 1.5rem 1.5rem 1.5rem', // Adds breathing room at start and end of scroll
+            WebkitOverflowScrolling: 'touch',
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'none',
+          }}
+        >
+          {/* Internal style to keep the clean look by hiding scrollbars */}
+          <style>{`
+            .hide-sb::-webkit-scrollbar { display: none; }
+          `}</style>
+          
           {categories.map((cat, i) => (
             <a
               key={i}
               href={cat.link}
+              className="hide-sb"
               style={{
                 display: 'block',
                 position: 'relative',
-                width: '220px',
-                height: '220px',
+                width: '240px', // Slightly wider for better mobile presence
+                height: '240px',
                 borderRadius: '0',
                 textDecoration: 'none',
                 transition: 'transform .3s ease, box-shadow .3s ease',
                 cursor: 'pointer',
                 overflow: 'hidden',
-                flexShrink: 0
+                flexShrink: 0,
+                boxShadow: '0 4px 16px rgba(184,134,11,.10)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-4px)'
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(184,134,11,.18)'
-                const bg = e.currentTarget.querySelector('div[style*="backgroundImage"]')
-                if (bg) bg.style.transform = 'scale(1.05)'
+                e.currentTarget.style.transform = 'translateY(-6px)'
+                e.currentTarget.style.boxShadow = '0 12px 30px rgba(184,134,11,.22)'
+                const bg = e.currentTarget.querySelector('.cat-bg')
+                if (bg) bg.style.transform = 'scale(1.08)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)'
                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(184,134,11,.10)'
-                const bg = e.currentTarget.querySelector('div[style*="backgroundImage"]')
+                const bg = e.currentTarget.querySelector('.cat-bg')
                 if (bg) bg.style.transform = 'scale(1)'
               }}
             >
               {/* Background Image */}
+              <div 
+                className="cat-bg"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  backgroundImage: `url(${cat.icon})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)'
+                }} 
+              />
+              
+              {/* Dark Gradient Overlay */}
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                backgroundImage: `url(${cat.icon})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                transition: 'transform 0.5s ease'
+                background: 'linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 100%)'
               }} />
-              {/* Dark Overlay */}
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%)'
-              }} />
+
               {/* Content */}
               <div style={{
                 position: 'relative',
@@ -1332,25 +1357,25 @@ function WhatWeOffer() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-end',
-                padding: '1rem'
+                padding: '1.2rem'
               }}>
                 <h3 style={{
                   fontFamily: 'var(--fd)',
-                  fontSize: '1.2rem',
+                  fontSize: '1.25rem',
                   fontWeight: 700,
                   color: '#fff',
                   marginBottom: '0.4rem',
                   letterSpacing: '1.5px',
                   textTransform: 'uppercase',
-                  textShadow: '0 2px 8px rgba(0,0,0,0.5)'
+                  textShadow: '0 2px 10px rgba(0,0,0,0.4)'
                 }}>
                   {cat.title}
                 </h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                   {cat.items.map((item, j) => (
                     <span key={j} style={{
-                      fontSize: '0.75rem',
-                      color: '#fff',
+                      fontSize: '0.78rem',
+                      color: 'rgba(255,255,255,0.9)',
                       fontWeight: 500,
                       textShadow: '0 1px 4px rgba(0,0,0,0.5)'
                     }}>
@@ -1359,16 +1384,18 @@ function WhatWeOffer() {
                   ))}
                 </div>
                 <div style={{
-                  marginTop: '0.6rem',
+                  marginTop: '0.8rem',
                   fontSize: '0.75rem',
                   color: '#fff',
-                fontWeight: 600,
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.3rem'
-              }}>
-                Explore <span style={{ fontSize: '0.85rem' }}>→</span>
-              </div>
+                  fontWeight: 700,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  letterSpacing: '1px',
+                  textTransform: 'uppercase'
+                }}>
+                  Explore <span style={{ fontSize: '1rem' }}>→</span>
+                </div>
               </div>
             </a>
           ))}
@@ -1376,7 +1403,6 @@ function WhatWeOffer() {
       </div>
     </section>
   )
-
 }
 
 
@@ -1421,8 +1447,8 @@ function FeaturedPreviewStrip() {
                 border: '1px solid rgba(184,134,11,.20)',
                 transition: 'transform .3s ease'
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)' }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
+                onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)' }}
+                onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
               >
                 <img src={item.img} alt={item.label} width={80} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
@@ -1647,7 +1673,7 @@ function Cheesecake() {
 
             <Label t="The Classic" />
 
-            <h2 className="h2" style={{ fontSize: '44.8px', fontFamily: 'Taviraj, georgia, serif' }}>The <em style={{ display:'inline-block',color:'#b8860b',background:'none',WebkitBackgroundClip:'initial',WebkitTextFillColor:'#1A1208',fontStyle:'normal' }}>Cheesecake</em></h2>
+            <h2 className="h2" style={{ fontSize: '44.8px', fontFamily: 'Taviraj, georgia, serif' }}>The <em style={{ display: 'inline-block', color: '#b8860b', background: 'none', WebkitBackgroundClip: 'initial', WebkitTextFillColor: '#1A1208', fontStyle: 'normal' }}>Cheesecake</em></h2>
 
             <p style={{ color: 'var(--muted)', lineHeight: 1.85, maxWidth: 460, fontSize: '1.02rem', marginTop: '.7rem' }}>
 
@@ -1779,7 +1805,7 @@ function Contact() {
 
             <Label t="Get in Touch" />
 
-            <h2 className="h2" style={{ fontSize: '44.8px', fontFamily: 'Taviraj, georgia, serif' }}>Reserve <em style={{ display:'inline-block',color:'#b8860b',background:'none',WebkitBackgroundClip:'initial',WebkitTextFillColor:'#1A1208',fontStyle:'normal' }}>your order</em></h2>
+            <h2 className="h2" style={{ fontSize: '44.8px', fontFamily: 'Taviraj, georgia, serif' }}>Reserve <em style={{ display: 'inline-block', color: '#b8860b', background: 'none', WebkitBackgroundClip: 'initial', WebkitTextFillColor: '#1A1208', fontStyle: 'normal' }}>your order</em></h2>
 
             <p style={{ color: 'var(--muted)', lineHeight: 1.85, maxWidth: 420, fontSize: '1.02rem', marginTop: '.7rem' }}>
 
@@ -1839,13 +1865,13 @@ function About() {
 
   const stats = [
 
-    { n: '50+',  count: 50,  suffix: '+', l: 'Flavours',     e: '🎂' },
+    { n: '50+', count: 50, suffix: '+', l: 'Flavours', e: '🎂' },
 
-    { n: '7',    count: 7,                l: 'Cookie Kinds', e: '🍪' },
+    { n: '7', count: 7, l: 'Cookie Kinds', e: '🍪' },
 
-    { n: '100%', count: 100, suffix: '%', l: 'Handmade',     e: '✋' },
+    { n: '100%', count: 100, suffix: '%', l: 'Handmade', e: '✋' },
 
-    { n: '∞',                              l: 'With Love',    e: '💛' },
+    { n: '∞', l: 'With Love', e: '💛' },
 
   ]
 
@@ -1865,7 +1891,7 @@ function About() {
 
               Baked with heart,<br />
 
-              <em style={{ display:'inline-block',color:'#b8860b',background:'none',WebkitBackgroundClip:'initial',WebkitTextFillColor:'#1A1208',fontStyle:'normal' }}>served with soul</em>
+              <em style={{ display: 'inline-block', color: '#b8860b', background: 'none', WebkitBackgroundClip: 'initial', WebkitTextFillColor: '#1A1208', fontStyle: 'normal' }}>served with soul</em>
 
             </h2>
 
@@ -1985,7 +2011,7 @@ function Footer() {
 
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
 
-            {[['Menu','#menu'],['Cakes','#cakes'],['Cookies','#cookies'],['Contact','#contact'],['About','#about']].map(([l, h]) => (
+            {[['Menu', '#menu'], ['Cakes', '#cakes'], ['Cookies', '#cookies'], ['Contact', '#contact'], ['About', '#about']].map(([l, h]) => (
 
               <a key={l} href={h} className="footer-link">{l}</a>
 
@@ -1999,13 +2025,13 @@ function Footer() {
 
             {[
 
-              { href: 'https://wa.me/971586206281',              icon: IMG.whatsapplogo, bg: '#25D366', label: 'WhatsApp' },
+              { href: 'https://wa.me/971586206281', icon: IMG.whatsapplogo, bg: '#25D366', label: 'WhatsApp' },
 
               { href: 'https://instagram.com/justcakeandcookie', icon: IMG.insta, bg: '#E1306C', label: 'Instagram' },
 
-              { href: 'mailto:justcakeandcookie@gmail.com',      icon: IMG.gmail, bg: '#c8860a', label: 'Email' },
+              { href: 'mailto:justcakeandcookie@gmail.com', icon: IMG.gmail, bg: '#c8860a', label: 'Email' },
 
-              { href: 'tel:+971586206281',                       icon: IMG.phonecalllogo, bg: '#3A1800', label: 'Call' },
+              { href: 'tel:+971586206281', icon: IMG.phonecalllogo, bg: '#3A1800', label: 'Call' },
 
             ].map(s => (
 
